@@ -19,44 +19,8 @@ class DarwinboxScraper(ApiScraper):
         self.warm_up_session()
 
     def warm_up_session(self) -> None:
-        response = self.session.get(
-            self.listing_url,
-            headers={
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.9",
-                "Cache-Control": "no-cache",
-                "Pragma": "no-cache",
-                "Upgrade-Insecure-Requests": "1",
-                "Sec-Fetch-Dest": "document",
-                "Sec-Fetch-Mode": "navigate",
-                "Sec-Fetch-Site": "none",
-                "Sec-Fetch-User": "?1",
-                "sec-ch-ua": '"Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"',
-                "sec-ch-ua-mobile": "?0",
-                "sec-ch-ua-platform": '"Windows"',
-            },
-            timeout=20,
-        )
+        response = self.session.get(self.listing_url, timeout=20)
         response.raise_for_status()
-
-    def api_headers(self) -> Dict[str, str]:
-        return {
-            "Accept": "application/json, text/plain, */*",
-            "Accept-Language": "en-US,en;q=0.9",
-            "Content-Type": "application/json;charset=UTF-8",
-            "Origin": self.base_url,
-            "Referer": self.listing_url,
-            "Cache-Control": "no-cache",
-            "Pragma": "no-cache",
-            "Priority": "u=1, i",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "X-Requested-With": "XMLHttpRequest",
-            "sec-ch-ua": '"Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"',
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": '"Windows"',
-        }
 
     def get_api_page(self, page: int) -> Dict:
         payload = {
@@ -68,7 +32,19 @@ class DarwinboxScraper(ApiScraper):
 
         response = self.session.post(
             self.api_url,
-            headers=self.api_headers(),
+            headers={
+                "Accept": "application/json, text/plain, */*",
+                "Accept-Language": "en",
+                "Content-Type": "application/json",
+                "Origin": self.base_url,
+                "Referer": self.listing_url,
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-origin",
+                "sec-ch-ua": '"Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"',
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": '"Windows"',
+            },
             json=payload,
             timeout=20,
         )
@@ -142,15 +118,14 @@ class DarwinboxScraper(ApiScraper):
                 return str(value).strip()
         return ""
 
-    def extract_location(self, job: Dict) -> tuple[str, bool]:
-        explicit_location = self.clean_text(str(job.get("officelocation_show_arr", "")))
-        if explicit_location:
-            explicit_location = explicit_location.split("(")[0].strip().rstrip(",")
-            explicit_location = self.clean_text(explicit_location)
-            if explicit_location:
-                return explicit_location, False
+    def parse_job(self, job: Dict) -> Dict[str, str] | None:
+        title = self.extract_title(job)
+        url = self.build_job_url(job)
 
-        return self.extract_location_from_api_data(
+        if not title or not url:
+            return None
+
+        location, location_is_guess = self.extract_location_from_api_data(
             job,
             text_keys=(
                 "location",
@@ -163,15 +138,6 @@ class DarwinboxScraper(ApiScraper):
             category_keys=("location",),
             description_keys=("description", "job_description"),
         )
-
-    def parse_job(self, job: Dict) -> Dict[str, str] | None:
-        title = self.extract_title(job)
-        url = self.build_job_url(job)
-
-        if not title or not url:
-            return None
-
-        location, location_is_guess = self.extract_location(job)
 
         return self.build_job_dict(
             title=title,
