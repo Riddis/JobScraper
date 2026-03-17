@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Dict, List
 
-import requests
 from bs4 import BeautifulSoup
 
 from scrapers.base import BaseScraper
@@ -13,31 +12,18 @@ class VerdonScraper(BaseScraper):
     base_url = "https://www.groupe-verdon.com"
     listing_url = "https://www.groupe-verdon.com/en/recruitment"
 
-    def clean_text(self, text: str) -> str:
-        return " ".join(text.split())
-
     def is_job_url(self, url: str) -> bool:
         path = self.url_path(url)
         return path.startswith("/en/offer-") or path.startswith("/fr/offre-")
 
     def scrape_jobs(self) -> List[Dict[str, str]]:
-        headers = {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/122.0.0.0 Safari/537.36"
-            )
-        }
-
         links = set()
-        link_titles = {}
+        link_titles: Dict[str, str] = {}
+        link_locations: Dict[str, str] = {}
 
         print(f"Fetching listing page: {self.listing_url}")
 
-        response = requests.get(self.listing_url, headers=headers, timeout=30)
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.text, "lxml")
+        soup = self.get_soup(self.listing_url)
 
         for a in soup.select("a[href]"):
             href = a.get("href")
@@ -53,9 +39,18 @@ class VerdonScraper(BaseScraper):
             if title_el:
                 title = self.clean_text(title_el.get_text(" ", strip=True))
 
+            location = ""
+            location_els = a.select(".offers_text")
+            if len(location_els) >= 2:
+                location = self.clean_text(location_els[-1].get_text(" ", strip=True))
+
             links.add(url)
+
             if title:
                 link_titles[url] = title
+
+            if location:
+                link_locations[url] = location
 
         print(f"Found {len(links)} job links")
 
@@ -65,12 +60,10 @@ class VerdonScraper(BaseScraper):
             print(f"Scraping: {url}")
 
             title = link_titles.get(url, "")
+            location = link_locations.get(url, "")
 
             if not title:
-                response = requests.get(url, headers=headers, timeout=30)
-                response.raise_for_status()
-
-                soup = BeautifulSoup(response.text, "lxml")
+                soup = self.get_soup(url)
 
                 h1 = soup.find("h1")
                 if h1:
@@ -85,11 +78,12 @@ class VerdonScraper(BaseScraper):
                 continue
 
             jobs.append(
-                {
-                    "source": self.source,
-                    "title": title,
-                    "url": url,
-                }
+                self.build_job_dict(
+                    title=title,
+                    url=url,
+                    location=location,
+                    location_is_guess=False,
+                )
             )
 
-        return sorted(jobs, key=lambda job: (job["title"], job["url"]))
+        return self.sort_jobs(jobs)

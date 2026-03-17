@@ -14,9 +14,7 @@ class VolvoCarsScraper(BaseScraper):
     source = "volvocars"
     base_url = "https://jobs.volvocars.com"
     listing_url = (
-        "https://jobs.volvocars.com/search/"
-        "?createNewAlert=false&q=&locationsearch=ghent"
-        "&optionsFacetsDD_department=&optionsFacetsDD_country="
+        "https://jobs.volvocars.com/search/?createNewAlert=false&q=&locationsearch=ghent&optionsFacetsDD_department=&optionsFacetsDD_country=&optionsFacetsDD_customfield3="
     )
 
     headers = {
@@ -77,7 +75,7 @@ class VolvoCarsScraper(BaseScraper):
 
         return sorted(links)
 
-    def parse_job_detail(self, job_url: str) -> Dict[str, str]:
+    def parse_job_detail(self, job_url: str) -> Dict[str, str] | None:
         soup = self.get_soup(job_url)
 
         title = ""
@@ -90,11 +88,15 @@ class VolvoCarsScraper(BaseScraper):
             title = title.replace(" Job Details | Volvo Car Corporation", "")
             title = self.clean_text(title)
 
-        return {
-            "source": self.source,
-            "title": title,
-            "url": job_url,
-        }
+        if not title:
+            return None
+
+        return self.build_job_dict(
+            title=title,
+            url=job_url,
+            location="Gent",
+            location_is_guess=False,
+        )
 
     def scrape_jobs(self) -> List[Dict[str, str]]:
         all_job_links = set()
@@ -131,9 +133,11 @@ class VolvoCarsScraper(BaseScraper):
         for url in job_links:
             print(f"Scraping: {url}")
             try:
-                jobs.append(self.parse_job_detail(url))
+                job = self.parse_job_detail(url)
+                if job:
+                    jobs.append(job)
                 time.sleep(1)
             except Exception as exc:
                 print(f"Failed to scrape {url}: {exc}")
 
-        return jobs
+        return self.sort_jobs(jobs)

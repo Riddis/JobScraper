@@ -1,84 +1,91 @@
 source,title,url,location,location_is_guess,first_seen_date,last_seen_date,is_active
-ardis,Junior Project & Service Engineer,https://www.ardis.eu/nl-BE/vacancies/junior-technical-consultant,,False,2026-03-10,2026-03-13,True
-ardis,Product Manager,https://www.ardis.eu/nl-BE/vacancies/product-manager,,False,2026-03-10,2026-03-13,True
-ardis,Project & Service Engineer,https://www.ardis.eu/nl-BE/vacancies/technical-consultant,,False,2026-03-10,2026-03-13,True
-ardis,Software Developer,https://www.ardis.eu/nl-BE/vacancies/software-developer-business-platform,,False,2026-03-10,2026-03-13,True
-astrid,ASC System Specialist,https://jobs.astrid.be/job/ASC-System-Specialist/1343371555/,Brussel,False,2026-03-09,2026-03-13,True
-astrid,PMO Officer,https://jobs.astrid.be/job/PMO-Officer/1331903255/,Brussel,False,2026-03-09,2026-03-13,True
-astrid,Product & Services Manager - Mobile Communication,https://jobs.astrid.be/job/Product-&-Services-Manager-Mobile-Communication/1337304155/,Brussel,False,2026-03-09,2026-03-13,True
-battmobility,Java Software Engineer (Backend / Full Stack),https://battmobility.be/careers#java-software-engineer-backend-full-stack,Gent,False,2026-03-10,2026-03-13,True
-battmobility,Technical Architect (Java & Cloud),https://battmobility.be/careers#technical-architect-java-en-cloud,Gent,False,2026-03-10,2026-03-13,True
-bizztalent,Bizztalent zkt. enthousiaste 1st line Support Engineer,https://www.bizztalent.be/vacatures/bizztalent-zkt-enthousiaste-1st-line-support-engineer,,False,2026-03-10,2026-03-13,True
-bizztalent,Bizztalent zkt. gedreven (freelance) Network/Security Engineer,https://www.bizztalent.be/vacatures/gedreven-freelance-network-security-engineer,,False,2026-03-10,2026-03-13,True
-bizztalent,Bizztalent zkt. gemotiveerde 2nd Line/Onsite Support Engineer,https://www.bizztalent.be/vacatures/bizztalent-zkt-gemotiveerde-2nd-line-onsite-support-engineer,,False,2026-03-10,2026-03-13,True
-bizztalent,Bizztalent zkt. gemotiveerde System Admin !,https://www.bizztalent.be/vacatures/gemotiveerde-system-admin,,False,2026-03-10,2026-03-13,True
-bizztalent,Bizztalent zkt. toegewijde (freelance) S ystem Engineer,https://www.bizztalent.be/vacatures/bizztalent-zkt-toegewijde-freelance-system-engineer,,False,2026-03-10,2026-03-13,True
+ardis,Junior Project & Service Engineer,https://www.ardis.eu/nl-BE/vacancies/junior-technical-consultant,,False,2026-03-10,2026-03-17,True
+ardis,Product Manager,https://www.ardis.eu/nl-BE/vacancies/product-manager,,False,2026-03-10,2026-03-17,True
+ardis,Project & Service Engineer,https://www.ardis.eu/nl-BE/vacancies/technical-consultant,,False,2026-03-10,2026-03-17,True
+ardis,Software Developer,https://www.ardis.eu/nl-BE/vacancies/software-developer-business-platform,,False,2026-03-10,2026-03-17,True
+astrid,ASC System Specialist,https://jobs.astrid.be/job/ASC-System-Specialist/1343371555/,Brussel,False,2026-03-09,2026-03-17,True
+astrid,PMO Officer,https://jobs.astrid.be/job/PMO-Officer/1331903255/,Brussel,False,2026-03-09,2026-03-17,True
+astrid,Product & Services Manager - Mobile Communication,https://jobs.astrid.be/job/Product-&-Services-Manager-Mobile-Communication/1337304155/,Brussel,False,2026-03-09,2026-03-17,True
+battmobility,Java Software Engineer (Backend / Full Stack),https://battmobility.be/careers#java-software-engineer-backend-full-stack,Gent,False,2026-03-10,2026-03-17,True
+battmobility,Technical Architect (Java & Cloud),https://battmobility.be/careers#technical-architect-java-en-cloud,Gent,False,2026-03-10,2026-03-17,True
+bizztalent,Bizztalent zkt. enthousiaste 1st line Support Engineer,https://www.bizztalent.be/vacatures/bizztalent-zkt-enthousiaste-1st-line-support-engineer,,False,2026-03-10,2026-03-17,True
+bizztalent,Bizztalent zkt. gedreven (freelance) Network/Security Engineer,https://www.bizztalent.be/vacatures/gedreven-freelance-network-security-engineer,,False,2026-03-10,2026-03-17,True
+bizztalent,Bizztalent zkt. gemotiveerde 2nd Line/Onsite Support Engineer,https://www.bizztalent.be/vacatures/bizztalent-zkt-gemotiveerde-2nd-line-onsite-support-engineer,,False,2026-03-10,2026-03-17,True
+bizztalent,Bizztalent zkt. gemotiveerde System Admin !,https://www.bizztalent.be/vacatures/gemotiveerde-system-admin,,False,2026-03-10,2026-03-17,True
+bizztalent,Bizztalent zkt. toegewijde (freelance) S ystem Engineer,https://www.bizztalent.be/vacatures/bizztalent-zkt-toegewijde-freelance-system-engineer,,False,2026-03-10,2026-03-17,True
 bx1,BX1 recherche: Ingénieur Système IT,https://bx1.be/annonce/bx1-recherche-ingenieur-systeme-it/,,False,2026-03-11,2026-03-11,True
-cheops,Cloud Engineer,https://www.cheops.com/jobs/cloud-engineer-cheops/?gh_jid=4409627002,,False,2026-03-09,2026-03-13,True
-cheops,Data Engineer,https://www.cheops.com/jobs/data-engineer/?gh_jid=8174509002,,False,2026-03-09,2026-03-13,True
-cheops,Functioneel Analist,https://www.cheops.com/jobs/functioneel-analist/?gh_jid=5454674002,,False,2026-03-09,2026-03-13,True
-cheops,Network Engineer,https://www.cheops.com/jobs/network-engineer/?gh_jid=4409662002,,False,2026-03-09,2026-03-13,True
-cheops,Security Engineer,https://www.cheops.com/jobs/security-engineer/?gh_jid=5041460002,,False,2026-03-09,2026-03-13,True
-cheops,Senior .NET Developer,https://www.cheops.com/jobs/senior-net-developer/?gh_jid=4409621002,,False,2026-03-09,2026-03-13,True
-cheops,Service Delivery Manager,https://www.cheops.com/jobs/service-delivery-manager-sdm-2/?gh_jid=4519478002,,False,2026-03-09,2026-03-13,True
-cheops,Service Delivery Manager,https://www.cheops.com/jobs/service-delivery-manager-sdm/?gh_jid=4519478002,,False,2026-03-09,2026-03-13,True
-cheops,Support Engineer,https://www.cheops.com/jobs/support-engineer-cheops/?gh_jid=4362741002,,False,2026-03-09,2026-03-13,True
-cheops,System Administrator,https://www.cheops.com/jobs/system-administrator/?gh_jid=4405175002,,False,2026-03-09,2026-03-13,True
-cheops,Workplace Engineer,https://www.cheops.com/jobs/workplace-engineer/?gh_jid=4405198002,,False,2026-03-09,2026-03-13,True
-cobral,Infrastructure Engineer,https://www.cobral.be/jobs/infrastructure-engineer/,,False,2026-03-09,2026-03-13,True
-cobral,Microsoft 365 Solution Architect,https://www.cobral.be/jobs/microsoft-365-solution-architect/,,False,2026-03-09,2026-03-13,True
-cobral,Service Desk Engineer - First Line,https://www.cobral.be/jobs/team-service-desk-engineer/,,False,2026-03-09,2026-03-13,True
-cobral,Service Desk Engineer - Second line,https://www.cobral.be/jobs/service-desk-engineer-second-line/,,False,2026-03-09,2026-03-13,True
-cobral,VoIP Engineer,https://www.cobral.be/jobs/voip-engineer/,,False,2026-03-09,2026-03-13,True
-colruytgroup,Business Architect,https://jobs.colruytgroup.com/nl/vacatures/business-architect,,False,2026-03-10,2026-03-13,True
-colruytgroup,Business Architect B2B CRM,https://jobs.colruytgroup.com/nl/vacatures/business-architect-b2b-crm,,False,2026-03-10,2026-03-13,True
-colruytgroup,Digital Analytics Developer,https://jobs.colruytgroup.com/nl/vacatures/digital-analytics-developer,,False,2026-03-10,2026-03-13,True
-colruytgroup,Frontend developer (Angular),https://jobs.colruytgroup.com/nl/vacatures/frontend-developer-angular,,False,2026-03-10,2026-03-13,True
-colruytgroup,Functioneel Analist,https://jobs.colruytgroup.com/nl/vacatures/functioneel-analist,,False,2026-03-10,2026-03-13,True
-colruytgroup,IT Architect,https://jobs.colruytgroup.com/nl/vacatures/it-architect,,False,2026-03-10,2026-03-13,True
-colruytgroup,IT Architect B2B CRM,https://jobs.colruytgroup.com/nl/vacatures/it-architect-b2b-crm,,False,2026-03-10,2026-03-13,True
-colruytgroup,IT Architect Digital Workplace Solutions,https://jobs.colruytgroup.com/nl/vacatures/it-architect-digital-workplace-solutions,,False,2026-03-10,2026-03-13,True
-colruytgroup,IT Security Architect,https://jobs.colruytgroup.com/nl/vacatures/it-security-architect,,False,2026-03-10,2026-03-13,True
-colruytgroup,Junior functioneel analist,https://jobs.colruytgroup.com/nl/vacatures/junior-functioneel-analist,,False,2026-03-10,2026-03-13,True
-colruytgroup,Lead Software Engineer Mainframe Supply Chain,https://jobs.colruytgroup.com/nl/vacatures/lead-software-engineer-mainframe-supply-chain,,False,2026-03-10,2026-03-13,True
-colruytgroup,Project Management Trainer,https://jobs.colruytgroup.com/nl/vacatures/project-management-trainer,,False,2026-03-10,2026-03-13,True
-colruytgroup,Traineeship IT Analyse,https://jobs.colruytgroup.com/nl/vacatures/traineeship-it-analyse,,False,2026-03-10,2026-03-13,True
-crelan,Business Analysis & Applications Specialist,https://www.crelan.be/nl/jobs/functie/business-analysis-applications-specialist,,False,2026-03-11,2026-03-13,True
-crelan,Head of Enterprise IT Architecture,https://www.crelan.be/nl/particulieren/functie/head-enterprise-it-architecture,,False,2026-03-11,2026-03-13,True
-crelan,IT auditor,https://www.crelan.be/nl/particulieren/functie/it-auditor,,False,2026-03-11,2026-03-13,True
-crelan,IT security expert,https://www.crelan.be/nl/particulieren/functie/it-security-expert,,False,2026-03-11,2026-03-13,True
-crelan,IT security officer (Security operations),https://www.crelan.be/nl/jobs/functie/it-security-officer-security-operations,,False,2026-03-11,2026-03-13,True
-crelan,IT security senior expert,https://www.crelan.be/nl/particulieren/functie/it-security-senior-expert,,False,2026-03-11,2026-03-13,True
-crelan,Senior analist - Team mobile,https://www.crelan.be/nl/particulieren/functie/senior-analist-team-mobile,,False,2026-03-11,2026-03-13,True
-district09,Technology architect SAP / Tech Lead,https://district09.gent/nl/vacatures/technology-architect-sap-tech-lead,Gent,False,2026-03-10,2026-03-13,True
-equalminds,Functional Analyst,https://equalminds.eu/career/functional-analyst/,,False,2026-03-09,2026-03-13,True
-evara,Ploegbaas groenaanleg en onderhoud | Genk,https://evara.be/jobs/ploegbaas-groenaanleg-en-onderhoud-genk-1,Genk,False,2026-03-13,2026-03-13,True
-evara,Systeembeheerder,https://evara.be/jobs/systeembeheerder-1,Bierbeek,False,2026-03-10,2026-03-13,True
-fluxys,C# .NET Software Developer,https://careers.fluxys.com/jobs/1439?lang=en-us,Cambridge,False,2026-03-10,2026-03-13,True
-fluxys,Cloud Engineer,https://careers.fluxys.com/jobs/1455?lang=en-us,,False,2026-03-10,2026-03-13,True
-fluxys,Developer,https://careers.fluxys.com/jobs/1474?lang=en-us,Lisbon,False,2026-03-10,2026-03-13,True
-fluxys,Dispatching Manager,https://careers.fluxys.com/jobs/1480?lang=en-us,Brussels,False,2026-03-13,2026-03-13,True
-harveynash,CI/CD Engineer,https://www.harveynash.be/jobs/296986-CICD-Engineer,Brussels,False,2026-03-03,2026-03-13,True
-harveynash,Splunk developer,https://www.harveynash.be/jobs/297072-Splunk-developer-,Belgium,False,2026-03-11,2026-03-13,True
-infrabel,Application Specialist ICT,https://jobs.infrabel.be/job/Application-Specialist-ICT/35501-nl_NL/,Anderlecht,False,2026-03-11,2026-03-16,True
-infrabel,BIM-coördinator,https://jobs.infrabel.be/job/BIM-co%C3%B6rdinator/35459-nl_NL/,Gent,False,2026-03-13,2026-03-16,True
+cheops,Cloud Engineer,https://www.cheops.com/jobs/cloud-engineer-cheops/?gh_jid=4409627002,,False,2026-03-09,2026-03-17,True
+cheops,Data Engineer,https://www.cheops.com/jobs/data-engineer/?gh_jid=8174509002,,False,2026-03-09,2026-03-17,True
+cheops,Functioneel Analist,https://www.cheops.com/jobs/functioneel-analist/?gh_jid=5454674002,,False,2026-03-09,2026-03-17,True
+cheops,Network Engineer,https://www.cheops.com/jobs/network-engineer/?gh_jid=4409662002,,False,2026-03-09,2026-03-17,True
+cheops,Security Engineer,https://www.cheops.com/jobs/security-engineer/?gh_jid=5041460002,,False,2026-03-09,2026-03-17,True
+cheops,Senior .NET Developer,https://www.cheops.com/jobs/senior-net-developer/?gh_jid=4409621002,,False,2026-03-09,2026-03-17,True
+cheops,Service Delivery Manager,https://www.cheops.com/jobs/service-delivery-manager-sdm-2/?gh_jid=4519478002,,False,2026-03-09,2026-03-17,True
+cheops,Service Delivery Manager,https://www.cheops.com/jobs/service-delivery-manager-sdm/?gh_jid=4519478002,,False,2026-03-09,2026-03-17,True
+cheops,Support Engineer,https://www.cheops.com/jobs/support-engineer-cheops/?gh_jid=4362741002,,False,2026-03-09,2026-03-17,True
+cheops,System Administrator,https://www.cheops.com/jobs/system-administrator/?gh_jid=4405175002,,False,2026-03-09,2026-03-17,True
+cheops,Workplace Engineer,https://www.cheops.com/jobs/workplace-engineer/?gh_jid=4405198002,,False,2026-03-09,2026-03-17,True
+cobral,Infrastructure Engineer,https://www.cobral.be/jobs/infrastructure-engineer/,,False,2026-03-09,2026-03-17,True
+cobral,Microsoft 365 Solution Architect,https://www.cobral.be/jobs/microsoft-365-solution-architect/,,False,2026-03-09,2026-03-17,True
+cobral,Service Desk Engineer - First Line,https://www.cobral.be/jobs/team-service-desk-engineer/,,False,2026-03-09,2026-03-17,True
+cobral,Service Desk Engineer - Second line,https://www.cobral.be/jobs/service-desk-engineer-second-line/,,False,2026-03-09,2026-03-17,True
+cobral,VoIP Engineer,https://www.cobral.be/jobs/voip-engineer/,,False,2026-03-09,2026-03-17,True
+colruytgroup,Business Architect,https://jobs.colruytgroup.com/nl/vacatures/business-architect,,False,2026-03-10,2026-03-17,True
+colruytgroup,Business Architect B2B CRM,https://jobs.colruytgroup.com/nl/vacatures/business-architect-b2b-crm,,False,2026-03-10,2026-03-17,True
+colruytgroup,Digital Analytics Developer,https://jobs.colruytgroup.com/nl/vacatures/digital-analytics-developer,,False,2026-03-10,2026-03-17,True
+colruytgroup,Frontend developer (Angular),https://jobs.colruytgroup.com/nl/vacatures/frontend-developer-angular,,False,2026-03-10,2026-03-17,True
+colruytgroup,Functioneel Analist,https://jobs.colruytgroup.com/nl/vacatures/functioneel-analist,,False,2026-03-10,2026-03-17,True
+colruytgroup,IT Architect,https://jobs.colruytgroup.com/nl/vacatures/it-architect,,False,2026-03-10,2026-03-17,True
+colruytgroup,IT Architect B2B CRM,https://jobs.colruytgroup.com/nl/vacatures/it-architect-b2b-crm,,False,2026-03-10,2026-03-17,True
+colruytgroup,IT Architect Digital Workplace Solutions,https://jobs.colruytgroup.com/nl/vacatures/it-architect-digital-workplace-solutions,,False,2026-03-10,2026-03-17,True
+colruytgroup,IT Security Architect,https://jobs.colruytgroup.com/nl/vacatures/it-security-architect,,False,2026-03-10,2026-03-17,True
+colruytgroup,Integration Engineer BCOM,https://jobs.colruytgroup.com/nl/vacatures/integration-engineer-bcom,,False,2026-03-17,2026-03-17,True
+colruytgroup,Junior functioneel analist,https://jobs.colruytgroup.com/nl/vacatures/junior-functioneel-analist,,False,2026-03-10,2026-03-17,True
+colruytgroup,Lead Software Engineer Mainframe Supply Chain,https://jobs.colruytgroup.com/nl/vacatures/lead-software-engineer-mainframe-supply-chain,,False,2026-03-10,2026-03-17,True
+colruytgroup,Project Management Trainer,https://jobs.colruytgroup.com/nl/vacatures/project-management-trainer,,False,2026-03-10,2026-03-17,True
+colruytgroup,Traineeship IT Analyse,https://jobs.colruytgroup.com/nl/vacatures/traineeship-it-analyse,,False,2026-03-10,2026-03-17,True
+crelan,Business Analysis & Applications Specialist,https://www.crelan.be/nl/jobs/functie/business-analysis-applications-specialist,,False,2026-03-11,2026-03-17,True
+crelan,Head of Enterprise IT Architecture,https://www.crelan.be/nl/particulieren/functie/head-enterprise-it-architecture,,False,2026-03-11,2026-03-17,True
+crelan,IT auditor,https://www.crelan.be/nl/particulieren/functie/it-auditor,,False,2026-03-11,2026-03-17,True
+crelan,IT security expert,https://www.crelan.be/nl/particulieren/functie/it-security-expert,,False,2026-03-11,2026-03-17,True
+crelan,IT security officer (Security operations),https://www.crelan.be/nl/jobs/functie/it-security-officer-security-operations,,False,2026-03-11,2026-03-17,True
+crelan,IT security senior expert,https://www.crelan.be/nl/particulieren/functie/it-security-senior-expert,,False,2026-03-11,2026-03-17,True
+crelan,Senior analist - Team mobile,https://www.crelan.be/nl/particulieren/functie/senior-analist-team-mobile,,False,2026-03-11,2026-03-17,True
+decathlon,Étudiant.e Technicien.ne Atelier,https://jobs.decathlon.be/nl/vacatures/etudiant-e-technicien-ne-atelier-decathlon-alleur-ans-vbybx047,Ans,False,2026-03-17,2026-03-17,True
+district09,Technology architect SAP / Tech Lead,https://district09.gent/nl/vacatures/technology-architect-sap-tech-lead,Gent,False,2026-03-10,2026-03-17,True
+equalminds,Functional Analyst,https://equalminds.eu/career/functional-analyst/,,False,2026-03-09,2026-03-17,True
+evara,Chauffeur - flexijob,https://evara.be/jobs/chauffeur-flexijob,Lede,False,2026-03-17,2026-03-17,True
+evara,Empowermentcoach (Mortsel),https://evara.be/jobs/empowermentcoach-mortsel,Mortsel,False,2026-03-17,2026-03-17,True
+evara,"Jobcoach (Gent) Voltijds, vervangingscontract",https://evara.be/jobs/jobcoach-gent-voltijds-vervangingscontract,Gent,False,2026-03-17,2026-03-17,True
+evara,Ploegbaas groenaanleg en onderhoud | Genk,https://evara.be/jobs/ploegbaas-groenaanleg-en-onderhoud-genk-1,Genk,False,2026-03-13,2026-03-17,True
+evara,Systeembeheerder,https://evara.be/jobs/systeembeheerder-1,Bierbeek,False,2026-03-10,2026-03-13,False
+evara,Wijkwerker geestelijke gezondheid,https://evara.be/jobs/wijkwerker-geestelijke-gezondheid,Gent,False,2026-03-17,2026-03-17,True
+fluxys,C# .NET Software Developer,https://careers.fluxys.com/jobs/1439?lang=en-us,Cambridge,False,2026-03-10,2026-03-17,True
+fluxys,Cloud Engineer,https://careers.fluxys.com/jobs/1455?lang=en-us,,False,2026-03-10,2026-03-17,True
+fluxys,Developer,https://careers.fluxys.com/jobs/1474?lang=en-us,Lisbon,False,2026-03-10,2026-03-17,True
+fluxys,Dispatching Manager,https://careers.fluxys.com/jobs/1480?lang=en-us,Brussels,False,2026-03-13,2026-03-13,False
+harveynash,CI/CD Engineer,https://www.harveynash.be/jobs/296986-CICD-Engineer,Brussels,False,2026-03-03,2026-03-17,True
+harveynash,Splunk developer,https://www.harveynash.be/jobs/297072-Splunk-developer-,Belgium,False,2026-03-11,2026-03-17,True
+hieronymus,Technisch/Facilitair directeur,https://hieronymus.hr-technologies.com/front/nl/vacancies/1431?title=technischfacilitair-directeur-%281431%29,,False,2026-03-17,2026-03-17,True
+infrabel,Application Specialist ICT,https://jobs.infrabel.be/job/Application-Specialist-ICT/35501-nl_NL/,Anderlecht,False,2026-03-11,2026-03-17,True
+infrabel,BIM-coördinator,https://jobs.infrabel.be/job/BIM-co%C3%B6rdinator/35459-nl_NL/,Gent,False,2026-03-13,2026-03-17,True
 infrabel,Business Investment Case Specialist,https://jobs.infrabel.be/job/Business-Investment-Case-Specialist/34846-nl_NL/,Sint-Gillis,False,2025-11-04,2026-03-16,False
-infrabel,Category Manager ICT Software,https://jobs.infrabel.be/job/Category-Manager-ICT-Software/35315-nl_NL/,Sint-Gillis,False,2026-01-28,2026-03-16,True
-infrabel,Data Engineer ICT,https://jobs.infrabel.be/job/Data-Engineer-ICT/34839-nl_NL/,Anderlecht,False,2026-03-09,2026-03-16,True
+infrabel,Category Manager ICT Software,https://jobs.infrabel.be/job/Category-Manager-ICT-Software/35315-nl_NL/,Sint-Gillis,False,2026-01-28,2026-03-17,True
+infrabel,Data Engineer ICT,https://jobs.infrabel.be/job/Data-Engineer-ICT/34839-nl_NL/,Anderlecht,False,2026-03-09,2026-03-17,True
 infrabel,Functional Analyst ICT Signalling Design Platform,https://jobs.infrabel.be/job/Functional-Analyst-ICT-Signalling-Design-Platform/35377-nl_NL/,Anderlecht,False,2026-02-04,2026-03-16,False
-infrabel,Ingenieur Onderhoud Sporen en Wissels,https://jobs.infrabel.be/job/Ingenieur-Onderhoud-Sporen-en-Wissels/35189-nl_NL/,Berchem,False,2026-01-26,2026-03-16,True
-infrabel,Junior Data Analyst in het kader van het programma ICT Traineeship,https://jobs.infrabel.be/job/Junior-Data-Analyst-in-het-kader-van-het-programma-ICT-Traineeship/35491-nl_NL/,Anderlecht,False,2026-03-06,2026-03-16,True
-infrabel,Junior Functional Analyst in het kader van het programma ICT Traineeship,https://jobs.infrabel.be/job/Junior-Functional-Analyst-in-het-kader-van-het-programma-ICT-Traineeship/35489-nl_NL/,Anderlecht,False,2026-03-06,2026-03-16,True
-infrabel,Product Management Specialist,https://jobs.infrabel.be/job/Product-Management-Specialist/35486-nl_NL/,Sint-Gillis,False,2026-03-13,2026-03-16,True
-infrabel,Program Manager ICT ERP Integration,https://jobs.infrabel.be/job/Program-Manager-ICT-ERP-Integration/35502-nl_NL/,Anderlecht,False,2026-03-12,2026-03-16,True
-infrabel,Project Leader ICT Housing & Power Supply,https://jobs.infrabel.be/job/Project-Leader-ICT-Housing-&-Power-Supply/35132-nl_NL/,Anderlecht,False,2026-01-29,2026-03-16,True
+infrabel,Ingenieur Onderhoud Sporen en Wissels,https://jobs.infrabel.be/job/Ingenieur-Onderhoud-Sporen-en-Wissels/35189-nl_NL/,Berchem,False,2026-01-26,2026-03-17,True
+infrabel,Junior Data Analyst in het kader van het programma ICT Traineeship,https://jobs.infrabel.be/job/Junior-Data-Analyst-in-het-kader-van-het-programma-ICT-Traineeship/35491-nl_NL/,Anderlecht,False,2026-03-06,2026-03-17,True
+infrabel,Junior Functional Analyst in het kader van het programma ICT Traineeship,https://jobs.infrabel.be/job/Junior-Functional-Analyst-in-het-kader-van-het-programma-ICT-Traineeship/35489-nl_NL/,Anderlecht,False,2026-03-06,2026-03-17,True
+infrabel,Product Management Specialist,https://jobs.infrabel.be/job/Product-Management-Specialist/35486-nl_NL/,Sint-Gillis,False,2026-03-13,2026-03-17,True
+infrabel,Program Manager ICT ERP Integration,https://jobs.infrabel.be/job/Program-Manager-ICT-ERP-Integration/35502-nl_NL/,Anderlecht,False,2026-03-12,2026-03-17,True
+infrabel,Project Leader ICT Housing & Power Supply,https://jobs.infrabel.be/job/Project-Leader-ICT-Housing-&-Power-Supply/35132-nl_NL/,Anderlecht,False,2026-01-29,2026-03-16,False
 infrabel,Project Leader ICT Signalling Design Platform,https://jobs.infrabel.be/job/Project-Leader-ICT-Signalling-Design-Platform/35376-nl_NL/,Anderlecht,False,2026-02-04,2026-03-16,False
-infrabel,Project Leader IT,https://jobs.infrabel.be/job/Project-Leader-IT/30135-nl_NL/,Anderlecht,False,2025-06-13,2026-03-16,True
-infrabel,Projectleider Infrastructuur,https://jobs.infrabel.be/job/Projectleider-Infrastructuur/35493-nl_NL/,,False,2026-03-06,2026-03-16,False
+infrabel,Project Leader IT,https://jobs.infrabel.be/job/Project-Leader-IT/30135-nl_NL/,Anderlecht,False,2025-06-13,2026-03-17,True
+infrabel,Projectleider Infrastructuur,https://jobs.infrabel.be/job/Projectleider-Infrastructuur/35493-nl_NL/,,False,2026-03-06,2026-03-17,True
 infrabel,System Specialist ICT Workplace as a Service,https://jobs.infrabel.be/job/System-Specialist-ICT-Workplace-as-a-Service/34649-nl_NL/,Sint-Gillis,False,2026-02-10,2026-03-16,False
-infrabel,Team Lead Cybersecurity,https://jobs.infrabel.be/job/Team-Lead-Cybersecurity/34173-nl_NL/,Anderlecht,False,2025-10-31,2026-03-16,True
-infrabel,Team Lead ERP Development & Mobile Platform,https://jobs.infrabel.be/job/Team-Lead-ERP-Development-&-Mobile-Platform/35071-nl_NL/,Anderlecht,False,2025-12-16,2026-03-16,True
-infrabel,Team Leader IT - Capacity Management,https://jobs.infrabel.be/job/Team-Leader-IT-Capacity-Management/32993-nl_NL/,Anderlecht,False,2025-10-17,2026-03-16,False
+infrabel,Team Lead Cybersecurity,https://jobs.infrabel.be/job/Team-Lead-Cybersecurity/34173-nl_NL/,Anderlecht,False,2025-10-31,2026-03-17,True
+infrabel,Team Lead ERP Development & Mobile Platform,https://jobs.infrabel.be/job/Team-Lead-ERP-Development-&-Mobile-Platform/35071-nl_NL/,Anderlecht,False,2025-12-16,2026-03-17,True
+infrabel,Team Leader IT - Capacity Management,https://jobs.infrabel.be/job/Team-Leader-IT-Capacity-Management/32993-nl_NL/,Anderlecht,False,2025-10-17,2026-03-17,True
 infrabel_ict,Data Engineer ICT,https://jobs.infrabel.be/job/Data-Engineer-ICT/34839-nl_NL/,,False,2026-03-09,2026-03-10,True
 infrabel_ict,Functional Analyst ICT Signalling Design Platform,https://jobs.infrabel.be/job/Functional-Analyst-ICT-Signalling-Design-Platform/35377-nl_NL/,,False,2026-02-04,2026-03-10,True
 infrabel_ict,Project Leader ICT Housing & Power Supply,https://jobs.infrabel.be/job/Project-Leader-ICT-Housing-&-Power-Supply/35132-nl_NL/,,False,2026-01-29,2026-03-10,True
@@ -94,6 +101,7 @@ itsgroup,Administrateur Base de Données H/F,https://carriere.itsgroup.fr/2938/d
 itsgroup,Administrateur bases de données (H/F),https://carriere.itsgroup.fr/2283/detail_annonce.php,Montpellier,False,2025-12-23,2026-03-17,True
 itsgroup,Architecte Cloud AWS (H/F),https://carriere.itsgroup.fr/3315/detail_annonce.php,Bordeaux,False,2025-12-22,2026-03-17,True
 itsgroup,Architecte Data Cloud,https://carriere.itsgroup.fr/3395/detail_annonce.php,Lille,False,2026-02-12,2026-03-17,True
+itsgroup,Architecte Infrastructure & Production H/F,https://carriere.itsgroup.fr/3412/detail_annonce.php,Saint-Denis,False,2026-03-17,2026-03-17,True
 itsgroup,Architecte Réseau et Sécurité (H/F),https://carriere.itsgroup.fr/3392/detail_annonce.php,Boulogne-Billancourt,False,2026-02-10,2026-03-17,True
 itsgroup,Architecte Solutions Avant-Vente H/F,https://carriere.itsgroup.fr/3443/detail_annonce.php,Boulogne-Billancourt,False,2026-02-25,2026-03-17,True
 itsgroup,Citrix System Engineer - Group Server Team Windows,https://carriere.itsgroup.fr/3459/detail_annonce.php,Bruxelles,False,2026-03-09,2026-03-17,True
@@ -187,37 +195,42 @@ meatandmore,Stage rond IT bij Meat&More,https://www.meatandmore.be/nl/vacatures/
 meatandmore,System Engineer,https://www.meatandmore.be/nl/vacatures/system-engineer,,False,2026-03-11,2026-03-11,False
 oost_vlaanderen,Beleidsmedewerker data en analyse bij dienst Data,https://oost-vlaanderen.be/vacatures-provincie-oost-vlaanderen/alle-vacatures/beleidsmedewerker-data-en-analyse-bij-dienst-data.html,Gent,False,2026-03-17,2026-03-17,True
 oost_vlaanderen,Directeur bij directie Ondernemen & Europa,https://oost-vlaanderen.be/vacatures-provincie-oost-vlaanderen/alle-vacatures/directeur-bij-directie-ondernemen-en-europa.html,Gent,False,2026-03-17,2026-03-17,True
-planetgroup_itplanet,.NET Developer,https://it-planet.be/2026/02/17/net-developer-gent/,Oost-Vlaanderen,False,2026-02-17,2026-03-16,True
-planetgroup_itplanet,.NET Developer,https://it-planet.be/2026/03/13/net-developer-brussel/,Brussel,False,2026-03-13,2026-03-16,True
-planetgroup_itplanet,.NET Developer,https://it-planet.be/2026/03/16/net-developer-antwerpen/,Antwerpen,False,2026-03-16,2026-03-16,True
-planetgroup_itplanet,AI Automation Analyst / Architect,https://it-planet.be/2026/03/09/ai-automation-analyst-architect-gent/,Oost-Vlaanderen,False,2026-03-09,2026-03-16,True
-planetgroup_itplanet,AI Automation Engineer,https://it-planet.be/2026/03/09/ai-automation-engineer-gent/,Oost-Vlaanderen,False,2026-03-09,2026-03-16,True
-planetgroup_itplanet,Azure Cloud Technical Analyst,https://it-planet.be/2026/03/04/azure-cloud-technical-analyst-berchem/,Antwerpen,False,2026-03-04,2026-03-16,True
-planetgroup_itplanet,Azure Data Architect,https://it-planet.be/2026/03/10/azure-data-architect-gent/,Oost-Vlaanderen,False,2026-03-10,2026-03-16,True
-planetgroup_itplanet,Business Analist,https://it-planet.be/2026/03/11/business-analist-berchem/,Antwerpen,False,2026-03-11,2026-03-16,True
-planetgroup_itplanet,Business Functioneel Analist,https://it-planet.be/2026/03/16/business-functioneel-analist-antwerpen/,Antwerpen,False,2026-03-16,2026-03-16,True
-planetgroup_itplanet,Functioneel Analist Hard Facilities/Exploitatie,https://it-planet.be/2026/03/10/functioneel-analist-hard-facilities-exploitatie-brussel/,Brussel,False,2026-03-10,2026-03-16,True
-planetgroup_itplanet,Java Developer,https://it-planet.be/2026/03/03/java-developer-leuven/,Vlaams-Brabant,False,2026-03-03,2026-03-16,True
-planetgroup_itplanet,Product Owner,https://it-planet.be/2026/02/19/product-owner-brussel/,Brussel,False,2026-02-19,2026-03-16,True
-planetgroup_itplanet,Product Owner,https://it-planet.be/2026/02/20/product-owner-west-vlaanderen/,West-Vlaanderen,False,2026-02-20,2026-03-16,True
-planetgroup_itplanet,Product Owner,https://it-planet.be/2026/03/09/product-owner-antwerpen/,Antwerpen,False,2026-03-09,2026-03-16,True
-planetgroup_itplanet,Project Office Analyst – Sint-Joost,https://it-planet.be/2026/03/06/project-office-analyst-sint-joost-ten-node/,Brussel,False,2026-03-06,2026-03-16,True
-planetgroup_itplanet,Projectleider,https://it-planet.be/2026/03/13/projectleider-antwerpen/,Oost-Vlaanderen,False,2026-03-13,2026-03-16,True
-planetgroup_itplanet,Projectmanager Change,https://it-planet.be/2026/03/11/projectmanager-change-antwerpen/,Antwerpen,False,2026-03-11,2026-03-16,True
-planetgroup_itplanet,SAP FI Consultant,https://it-planet.be/2026/02/16/sap-fi-consultant-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,True
-planetgroup_itplanet,SAP MDG Consultant,https://it-planet.be/2026/02/16/sap-mdg-consultant-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,True
-planetgroup_itplanet,SAP MM/VIM Consultant,https://it-planet.be/2026/02/16/sap-mm-vim-consultant-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,True
-planetgroup_itplanet,SAP MM/VIM/MDG Developer,https://it-planet.be/2026/02/16/sap-mm-vim-mdg-developer-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,True
-planetgroup_itplanet,SAS Data Analist,https://it-planet.be/2026/02/24/sas-data-analist-antwerpen/,Antwerpen,False,2026-02-24,2026-03-16,True
-planetgroup_itplanet,Senior Business Analist,https://it-planet.be/2026/03/10/senior-business-analist-brussel/,Antwerpen,False,2026-03-10,2026-03-16,True
-planetgroup_itplanet,Software Test Engineer,https://it-planet.be/2026/03/03/software-test-engineer-gent/,Oost-Vlaanderen,False,2026-03-03,2026-03-16,True
-planetgroup_itplanet,Solution Analyst,https://it-planet.be/2026/03/11/solution-analyst-lille/,Antwerpen,False,2026-03-11,2026-03-16,True
-planetgroup_itplanet,Solution Architect,https://it-planet.be/2026/02/10/solution-architect-schaarbeek/,Brussel,False,2026-02-10,2026-03-16,True
-planetgroup_itplanet,Technical Architect,https://it-planet.be/2026/02/02/technical-architect-brussel/,Brussel,False,2026-02-02,2026-03-16,True
-planetgroup_itplanet,Technical Lead,https://it-planet.be/2026/02/19/technical-lead-west-vlaanderen/,West-Vlaanderen,False,2026-02-19,2026-03-16,True
-planetgroup_itplanet,Test Automation Engineer,https://it-planet.be/2026/03/06/test-automation-engineer-brussel/,Brussel,False,2026-03-06,2026-03-16,True
-planetgroup_itplanet,Web Developer,https://it-planet.be/2026/03/04/web-developer-gent/,Oost-Vlaanderen,False,2026-03-04,2026-03-16,True
-planetgroup_itplanet,iOS Developer,https://it-planet.be/2026/02/23/ios-developer-leuven/,Vlaams-Brabant,False,2026-02-23,2026-03-16,True
+planetgroup_itplanet,.NET Developer,https://it-planet.be/2026/02/17/net-developer-gent/,Oost-Vlaanderen,False,2026-02-17,2026-03-17,True
+planetgroup_itplanet,.NET Developer,https://it-planet.be/2026/03/13/net-developer-brussel/,Brussel,False,2026-03-13,2026-03-17,True
+planetgroup_itplanet,.NET Developer,https://it-planet.be/2026/03/16/net-developer-antwerpen/,Antwerpen,False,2026-03-16,2026-03-17,True
+planetgroup_itplanet,AI Automation Analyst / Architect,https://it-planet.be/2026/03/09/ai-automation-analyst-architect-gent/,Oost-Vlaanderen,False,2026-03-09,2026-03-17,True
+planetgroup_itplanet,AI Automation Engineer,https://it-planet.be/2026/03/09/ai-automation-engineer-gent/,Oost-Vlaanderen,False,2026-03-09,2026-03-16,False
+planetgroup_itplanet,Azure Cloud Technical Analyst,https://it-planet.be/2026/03/04/azure-cloud-technical-analyst-berchem/,Antwerpen,False,2026-03-04,2026-03-17,True
+planetgroup_itplanet,Azure Data Architect,https://it-planet.be/2026/03/10/azure-data-architect-gent/,Oost-Vlaanderen,False,2026-03-10,2026-03-17,True
+planetgroup_itplanet,Business Analist,https://it-planet.be/2026/03/11/business-analist-berchem/,Antwerpen,False,2026-03-11,2026-03-17,True
+planetgroup_itplanet,Business Analist,https://it-planet.be/2026/03/16/business-analist-antwerpen/,Antwerpen,False,2026-03-16,2026-03-17,True
+planetgroup_itplanet,Business Analist,https://it-planet.be/2026/03/17/business-analist-brussel/,Brussel,False,2026-03-17,2026-03-17,True
+planetgroup_itplanet,Business Functioneel Analist,https://it-planet.be/2026/03/16/business-functioneel-analist-antwerpen/,Antwerpen,False,2026-03-16,2026-03-16,False
+planetgroup_itplanet,Data Analyst Dynatrace,https://it-planet.be/2026/03/10/data-analyst-dynatrace-antwerpen/,Antwerpen,False,2026-03-10,2026-03-17,True
+planetgroup_itplanet,Data Architect,https://it-planet.be/2026/03/11/data-architect-brussel/,Brussel,False,2026-03-11,2026-03-17,True
+planetgroup_itplanet,Functioneel Analist Hard Facilities/Exploitatie,https://it-planet.be/2026/03/10/functioneel-analist-hard-facilities-exploitatie-brussel/,Brussel,False,2026-03-10,2026-03-16,False
+planetgroup_itplanet,Java Developer,https://it-planet.be/2026/03/03/java-developer-leuven/,Vlaams-Brabant,False,2026-03-03,2026-03-16,False
+planetgroup_itplanet,Product Owner,https://it-planet.be/2026/02/19/product-owner-brussel/,Brussel,False,2026-02-19,2026-03-17,True
+planetgroup_itplanet,Product Owner,https://it-planet.be/2026/02/20/product-owner-west-vlaanderen/,West-Vlaanderen,False,2026-02-20,2026-03-17,True
+planetgroup_itplanet,Product Owner,https://it-planet.be/2026/03/09/product-owner-antwerpen/,Antwerpen,False,2026-03-09,2026-03-17,True
+planetgroup_itplanet,Programming Traineeship,https://it-planet.be/2026/03/17/programming-traineeship-gent/,Oost-Vlaanderen,False,2026-03-17,2026-03-17,True
+planetgroup_itplanet,Project Office Analyst – Sint-Joost,https://it-planet.be/2026/03/06/project-office-analyst-sint-joost-ten-node/,Brussel,False,2026-03-06,2026-03-17,True
+planetgroup_itplanet,Projectleider,https://it-planet.be/2026/03/13/projectleider-antwerpen/,Oost-Vlaanderen,False,2026-03-13,2026-03-17,True
+planetgroup_itplanet,Projectmanager Change,https://it-planet.be/2026/03/11/projectmanager-change-antwerpen/,Antwerpen,False,2026-03-11,2026-03-17,True
+planetgroup_itplanet,SAP FI Consultant,https://it-planet.be/2026/02/16/sap-fi-consultant-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,False
+planetgroup_itplanet,SAP MDG Consultant,https://it-planet.be/2026/02/16/sap-mdg-consultant-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,False
+planetgroup_itplanet,SAP MM/VIM Consultant,https://it-planet.be/2026/02/16/sap-mm-vim-consultant-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,False
+planetgroup_itplanet,SAP MM/VIM/MDG Developer,https://it-planet.be/2026/02/16/sap-mm-vim-mdg-developer-gent/,Oost-Vlaanderen,False,2026-02-16,2026-03-16,False
+planetgroup_itplanet,SAS Data Analist,https://it-planet.be/2026/02/24/sas-data-analist-antwerpen/,Antwerpen,False,2026-02-24,2026-03-17,True
+planetgroup_itplanet,Senior Business Analist,https://it-planet.be/2026/03/10/senior-business-analist-brussel/,Antwerpen,False,2026-03-10,2026-03-17,True
+planetgroup_itplanet,Software Test Engineer,https://it-planet.be/2026/03/03/software-test-engineer-gent/,Oost-Vlaanderen,False,2026-03-03,2026-03-17,True
+planetgroup_itplanet,Solution Analyst,https://it-planet.be/2026/03/11/solution-analyst-lille/,Antwerpen,False,2026-03-11,2026-03-17,True
+planetgroup_itplanet,Solution Architect,https://it-planet.be/2026/02/10/solution-architect-schaarbeek/,Brussel,False,2026-02-10,2026-03-17,True
+planetgroup_itplanet,Technical Architect,https://it-planet.be/2026/02/02/technical-architect-brussel/,Brussel,False,2026-02-02,2026-03-17,True
+planetgroup_itplanet,Technical Lead,https://it-planet.be/2026/02/19/technical-lead-west-vlaanderen/,West-Vlaanderen,False,2026-02-19,2026-03-17,True
+planetgroup_itplanet,Test Automation Engineer,https://it-planet.be/2026/03/06/test-automation-engineer-brussel/,Brussel,False,2026-03-06,2026-03-17,True
+planetgroup_itplanet,Web Developer,https://it-planet.be/2026/03/04/web-developer-gent/,Oost-Vlaanderen,False,2026-03-04,2026-03-17,True
+planetgroup_itplanet,iOS Developer,https://it-planet.be/2026/02/23/ios-developer-leuven/,Vlaams-Brabant,False,2026-02-23,2026-03-17,True
 planetgroup_solidtalent,All-round Technicus Electrisch,https://jobs.solid-talent.be/solidsite/all-round-technicus-electrisch-zelzate/,,False,2026-02-02,2026-03-10,True
 planetgroup_solidtalent,Hardware Engineer E-Plan,https://jobs.solid-talent.be/solidsite/hardware-engineer-e-plan-mol/,,False,2026-02-19,2026-03-10,True
 planetgroup_solidtalent,Junior Network Administrator,https://jobs.solid-talent.be/solidsite/junior-network-administrator-lillo/,,False,2026-01-18,2026-03-10,True
@@ -225,6 +238,12 @@ planetgroup_solidtalent,Project Controller,https://jobs.solid-talent.be/solidsit
 planetgroup_solidtalent,Projectcoördinator,https://jobs.solid-talent.be/solidsite/projectcoordinator-mechanische-installaties-mol/,,False,2026-02-24,2026-03-10,True
 planetgroup_solidtalent,Projectcoördinator- Automatisatie,https://jobs.solid-talent.be/solidsite/projectcoordinator-automatisatie-mol/,,False,2026-03-04,2026-03-10,True
 planetgroup_solidtalent,Projectleider Infrastructuur,https://jobs.solid-talent.be/solidsite/projectleider-infrastructuur-antwerpen/,,False,2026-03-02,2026-03-10,True
+planetgroup_xcare,Kinderbegeleider,https://x-care.be/2026/03/13/kinderbegeleider-antwerpen-noord/,Antwerpen,False,2026-03-13,2026-03-17,True
+planetgroup_xcare,ZGK – vaste indienstname,https://x-care.be/2026/03/17/zgk-vaste-indienstname-glabbeek/,Glabbeek,False,2026-03-17,2026-03-17,True
+planetgroup_xcare,"smile, trust, care",https://x-care.be/?p=28428,,False,2027-04-01,2026-03-17,True
+planetgroup_xcare,"smile, trust, care",https://x-care.be/?p=70755,,False,2027-04-01,2026-03-17,True
+planetgroup_xcare,"smile, trust, care",https://x-care.be/?p=85279,,False,2027-04-01,2026-03-17,True
+planetgroup_xcare,{{FUNCTIENAAM}} (interim – bijwerken),https://x-care.be/2026/03/17/functienaam-interim-bijwerken-regio/,{{REGIO}},False,2026-03-17,2026-03-17,True
 projinit,IT-Recruiter (freelance department),https://www.projinit.com/vacatures/it-recruiter-freelance-department,Oost-Vlaanderen,False,2026-03-10,2026-03-17,True
 signpost,(Freelance) Analytics Engineer,https://signpost.be/nl-be/jobs/nl-freelance-analytics-engineer-2476316,,False,2026-03-10,2026-03-17,True
 signpost,Digital Marketing Officer,https://signpost.be/nl-be/jobs/nl-digital-marketing-officer-2-2341611,,False,2026-03-10,2026-03-17,True
@@ -362,32 +381,10 @@ talencia,Test Engineer,https://www.talencia.be/jobs/test-engineer/,Brussels,Fals
 talencia,Test Engineer embedded and mobile Software,https://www.talencia.be/jobs/test-engineer-embedded-and-mobile-software/,Flemish Region,False,2026-03-11,2026-03-17,True
 talencia,Web Developer,https://www.talencia.be/jobs/web-developer-2/,Brussels,False,2026-03-11,2026-03-17,True
 talencia,Web Developer,https://www.talencia.be/jobs/web-developer/,Brussels,False,2026-03-11,2026-03-17,True
-televic,Business Development Manager Iberia At televic Conference,https://careers.televic.com/jobs/conference/business-development-manager-iberia/,Izegem,False,2026-03-17,2026-03-17,True
-televic,Customer Service Engineer At televic Rail,https://careers.televic.com/jobs/rail/customer-service-engineer/,Izegem,False,2026-03-17,2026-03-17,True
-televic,Electronics Technician At televic Rail,https://careers.televic.com/jobs/rail/electronics-technician/,Izegem,False,2026-03-17,2026-03-17,True
 televic,Head of IT At televic Rail,https://careers.televic.com/jobs/rail/head-of-it/,Izegem,False,2026-03-11,2026-03-17,True
-televic,Key Account Manager Belux At televic Healthcare,https://careers.televic.com/jobs/healthcare/key-account-business-development-manager/,Izegem,False,2026-03-17,2026-03-17,True
-televic,Key Account Manager Netherlands At televic Healthcare,https://careers.televic.com/jobs/healthcare/key-account-manager-nl/,Izegem,False,2026-03-17,2026-03-17,True
-televic,Marketing Internship (2 positions) At televic Education,https://careers.televic.com/jobs/education/marketing-internship-2-positions/,Izegem,False,2026-03-17,2026-03-17,True
 televic,Senior Java Developer At televic Rail,https://careers.televic.com/jobs/rail/senior-java-developer/,Izegem,False,2026-03-11,2026-03-17,True
-televic,Technical Bid Manager BE At televic Rail,https://careers.televic.com/jobs/rail/bid-manager-be-2/,Izegem,False,2026-03-17,2026-03-17,True
-televic,Technical Project Manager At televic Group,https://careers.televic.com/jobs/group/technical-project-manager/,Izegem,False,2026-03-17,2026-03-17,True
 uilenspel,Data-kapitein (m/v/x),https://www.giveaday.eu/nl-be/vrijwilligerswerk/data-kapitein-m-v-x/66329,Gent,False,2026-03-10,2026-03-17,True
-upgrade_estate,BIM Coördinator,https://jobs.upgrade-estate.be/nl/bim-coordinator,Gent,False,2026-03-17,2026-03-17,True
-upgrade_estate,Customer Care & Rent Specialist,https://jobs.upgrade-estate.be/nl/customer-care-rent-specialist,Gent,False,2026-03-17,2026-03-17,True
-upgrade_estate,Facility Coördinator,https://jobs.upgrade-estate.be/nl/facility-coordinator,Gent,False,2026-03-17,2026-03-17,True
-upgrade_estate,Finance Officer,https://jobs.upgrade-estate.be/nl/finance-officer,Gent,False,2026-03-17,2026-03-17,True
 upgrade_estate,IT Support Engineer,https://jobs.upgrade-estate.be/nl/it-support,Gent,False,2026-03-10,2026-03-17,True
-upgrade_estate,Jobstudent,https://jobs.upgrade-estate.be/nl/jobstudent,Gent Centrum,False,2026-03-17,2026-03-17,True
-upgrade_estate,Jobstudenten Bar Amelia (foodbar),https://jobs.upgrade-estate.be/nl/jobstudenten-bar-amelia-foodbar,Sint-Denijs Westrem,False,2026-03-17,2026-03-17,True
-upgrade_estate,Onderhoudsmedewerker Gebouwen,https://jobs.upgrade-estate.be/nl/onderhoudsmedewerker-gebouwen,België,False,2026-03-17,2026-03-17,True
-upgrade_estate,Poetshulp (FT/PT),https://jobs.upgrade-estate.be/nl/poetshulp-ft-pt,,False,2026-03-17,2026-03-17,True
-upgrade_estate,Real Estate Development,https://jobs.upgrade-estate.be/nl/real-estate-development,Gent,False,2026-03-17,2026-03-17,True
-upgrade_estate,Sales Real Estate,https://jobs.upgrade-estate.be/nl/sales-real-estate,Gent,False,2026-03-17,2026-03-17,True
-upgrade_estate,Smart Building Manager,https://jobs.upgrade-estate.be/nl/smart-building-manager,Gent,False,2026-03-17,2026-03-17,True
-upgrade_estate,Test of jij een match bent,https://jobs.upgrade-estate.be/nl/test-of-jij-een-match-bent/solliciteren,,False,2026-03-17,2026-03-17,True
-upgrade_estate,Upkot Coach Mons,https://jobs.upgrade-estate.be/nl/upkot-coach-mons,Mons,False,2026-03-17,2026-03-17,True
-upgrade_estate,Upstudent,https://jobs.upgrade-estate.be/nl/jobstudent-team-upstudent,,False,2026-03-17,2026-03-17,True
 vdk,BI Analist / Ontwikkelaar,https://www.vdk.be/nl/overzicht-vacatures/bi-analist-ontwikkelaar,Gent,False,2026-03-10,2026-03-17,True
 vdk,Cross-platform mobile full stack developer .NET (medior),https://www.vdk.be/nl/overzicht-vacatures/cross-platform-mobile-full-stack-developer-net-medior,Gent,False,2026-03-10,2026-03-17,True
 vdk,Head of IT Security,https://www.vdk.be/nl/overzicht-vacatures/head-it-security,Gent,False,2026-03-10,2026-03-17,True
