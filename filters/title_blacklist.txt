@@ -1,0 +1,332 @@
+#one phrase per line
+#if a job title contains one of these phrases, it will be excluded and removed from jobs.csv
+#lines starting with # are comments
+#empty lines are ignored
+#matching is case-insensitive
+#you can use wildcards *
+#site: prefix will blacklist only on the sepcific source site i.e. cheops: scrum master 
+
+zorgmedewerker
+welding
+chief of staff
+*Werken in een snelgroeiende organisatie die passie, talent en ambitie voorop zet?*
+trice
+account manager
+business analyst
+spontane sollicitatie
+stage bij cheops
+financial risk
+anti-fraud
+customer onboarding
+head of cio office
+management assistant
+security risk expert
+successions officer
+young graduate program
+field medewerker
+cleaning
+0
+accountant
+afdelingsmanager
+social media
+fiets*
+fulfillment
+jobstudent
+key account
+loyalty program
+van rysel
+onthaal*
+process & vendor
+responsable
+seller support
+payroll
+circulaire dienst
+verkoopmedewerker
+verkoper
+aankoper
+grondwerker
+business developer
+*bouw*
+sales consultant
+zinkwerker
+adjunct-afdelingshoofd
+*apotheker*
+afdelingshoofd oase
+*begleider
+boekhouder
+commercieel
+Diensthoofd 't Collectief
+volwassenwerking
+elektricien
+ergotherapeut
+*kok
+jobstudent
+keukenmedewerker
+*psychiater*
+*psycholoog*
+*therapeut*
+logistiek medewerker
+liaisonmedewerker
+*logistiek*
+assistent
+maatschapelijk
+medewerker
+evara : meewerkend teamleider
+*verpleegkundige
+*zorgkundige
+Orthopedagoog
+Psychologisch
+Schoonma(a)k(st)er
+Schoonmaker
+textieltechnologie
+Trajectbegeleider MCT Oostende-Veurne
+Voorwerk(st)er
+Vrijwilliger
+kapper
+AP/AR Team Leader
+Civil Projects Engineer
+Coordinator Piping
+Financing
+Electrical
+General Services Manager
+Head of M&A
+Business Developer
+Inline Inspection Manager
+Consolidation Officer
+Treasury Analyst
+Key Account Manager
+Metering Operations Agent
+Central Team Leader
+Patrol Officer
+Planning & Consolidation Strategist
+Safety
+Process Operator
+Public Affairs
+Recompression
+Sales
+Contract
+Cost Estimator
+Financial
+Technical Account Manager
+Electricity
+Apotheek
+Begeleidingsfunctie
+opleidingshoofd
+Administratieve duizendpoot
+Artistiek
+Communicatiemedewerker
+vakgroepvoorzitter
+Spontane sollicitatie
+*Onderwijs*
+Information Security Risk Advisor
+Project Manager
+Analist organisatie en infrastructuur
+woonondersteuning
+Autisme
+MFC Begeleider doelgroep
+Maatschappelijk werker
+Nachtbegeleider
+Plant Operator
+Accounting
+*Technieker
+*Bestuurder
+Buyer
+assistant
+Geomatics Engineer
+Telecom Engineer
+Lasser
+Leeg sjabloon
+Legal
+Enterprise Perspective
+Mecanicien
+Operator
+Procurement
+Finance
+Projectleider/Architect
+Property
+Rolling Stock
+Spoorwerker
+Communicatie Compensation
+Studentenjob
+Toezichter
+Discover your opportunities with Logi-technic
+Logi-technic
+Maintenance
+Mechanisch
+monteur
+Ons team
+VCA
+Werkvoorbereider
+Whistleblowing
+winkelbediende
+*chef
+*Beenhouwer
+Business Process Analyst
+District manager
+Duaal leren
+Elektrisch
+Filiaalverantwoordelijke
+Flexi-job
+Gerant
+HR
+Reiniger
+Lijnverantwoordelijke
+Manager HRBP
+Product Developer
+Productiemedewerker
+"Stage bij Meat&More, Buurtslagers of Bon'Ap"
+customer service
+procesbeheer
+project & proces
+Preventief Onderhoud
+Supply Chain Management
+Training Coach
+Transportbediende
+Visual Communications Manager
+Vrachtwagenchauffeur
+Bestuurder
+Directeur bij directie PAULO
+Redder
+Teamverantwoordelijke aankoop
+Business Manager
+Comp&Ben Expert
+HRBP
+L&D Specialist
+Projectmedewerker
+Recruitment
+Reward Specialist
+Talent Acquisition
+Administratief Bediende
+Calculator
+Configuratie- en Testingenieur
+Construction
+Cryogenic
+Digital Twin Engineer
+E&I Engineer
+Energiemanager
+Elektrisch Ontwerper
+Werfopvolger
+Energiemanager
+Equipment & Automation Engineer
+HSE Supervisor
+Junior Projectleider bovenleiding
+Junior Werkvoorbereider Civiel
+Keuringsmedewerker
+Kwaliteitsingenieur
+schilderwerken
+Lead Commissioning Planner
+Mechanical
+Mechanisch
+Milieuadviseur
+Onderhoudsingenieur
+Ontwerpcoördinator
+Ontwerptekenaar
+PE KoSteriele Processen
+Material Flow & Cold Chain
+Planbeheerder
+Planner Primavera
+Preventieadviseur
+Procesingenieur
+Project Engineer
+Project Ingenieur
+Project Planner
+Projectingenieur Elektriciteit
+Projectleider Elektromechanica
+Projectleider Facilitaire Projecten
+Civiel
+Property & Asset
+Quality Manager
+Quantity Surveyor
+Reliability Assistant
+Reliability Engineer
+Integration & Design Engineer
+Projectleider bovenleiding
+Scientific Writer
+Risico-analyse
+team Lead Utilities
+Conformiteit & Keuringen
+Piping & Mechanical
+Technical Writer
+Elektriciteit
+Veiligheidstoezichter
+werf*
+Werkvoorbereider
+Psychosezorg
+Zorgorganisatie
+dentaire
+*zorg*
+Freelance lange opdracht
+*Infirmier*
+Medisch
+Kinderopvang
+Verpleegkundigen
+Vroedkundige
+WZC regio Veurne
+Bedrijfsfinanciering
+E-learning specialist Lernova
+Open application
+Spontane sollicitaties
+Director Professional Services
+Business Management Solutions
+Adviserend Arts
+Architect (NIC)
+Audioloog
+Dossierbeheerder
+arbeidsongeschiktheid
+voetverzorger
+Poetshulp
+Risk Officer
+Stafmedewerker
+Tabacoloog
+Technisch Specialist (NIC)
+mobiliteitshulpmiddelen
+podologen
+podologen
+Ziekenfondsadviseur
+WOONUNIT
+Logopedist
+Projectmanager Samen-aankoop
+Thuisbegeleider
+leerkracht
+BUSINESS CONTROLLER
+CONTROLEUR DE GESTION
+FINANCE MANAGER
+Office Manager
+Recruitment
+Business Solution
+Telecom
+Bid Manager BE
+Business Development
+Digital Content Creator
+Electronics Technician
+Marketing Internship
+Spelend leren met kinderen
+*Vertaler
+BIM Coördinator
+Customer Care & Rent Specialist
+Facility Coördinator
+Finance Officer
+Jobstudenten Bar Amelia
+Real Estate
+Smart Building Manager
+Test of jij een match bent
+Upkot Coach
+Upstudent
+Kantoorhouder
+Relatiebeheerder
+vdk: Trainee
+HVAC Maintenance
+Piping Project Manager
+Industrial pipe fitter
+Logistics Coordinator
+Prevention adviser
+QAQC Manager
+Site manager
+Site Supervisor
+Workshop production manager
+Stage HR
+maintenance & engineering
+ondersteunende diensten
+Storingstechnieker
+Werkplekleren
+Talent Acquisition Officer
