@@ -79,7 +79,31 @@ class UpgradeEstateScraper(BaseScraper):
 
         return sorted(links)
 
-    def parse_job_detail(self, job_url: str) -> Dict[str, str]:
+    def extract_location(self, soup: BeautifulSoup) -> str:
+        header = soup.select_one("#job_header_text")
+        if not header:
+            return ""
+
+        h2 = header.select_one("h2")
+        if not h2:
+            return ""
+
+        spans = h2.select("span")
+        for span in spans:
+            text = self.clean_text(span.get_text(" ", strip=True))
+            if not text:
+                continue
+
+            if text.lower().startswith("in "):
+                return self.clean_text(text[3:])
+
+        h2_text = self.clean_text(h2.get_text(" ", strip=True))
+        if h2_text.lower().startswith("in "):
+            return self.clean_text(h2_text[3:])
+
+        return ""
+
+    def parse_job_detail(self, job_url: str) -> Dict[str, str] | None:
         soup = self.get_soup(job_url)
 
         title = ""
@@ -97,11 +121,17 @@ class UpgradeEstateScraper(BaseScraper):
         if not title and soup.title and soup.title.string:
             title = self.clean_text(soup.title.string)
 
-        return {
-            "source": self.source,
-            "title": title,
-            "url": job_url,
-        }
+        if not title:
+            return None
+
+        location = self.extract_location(soup)
+
+        return self.build_job_dict(
+            title=title,
+            url=job_url,
+            location=location,
+            location_is_guess=False,
+        )
 
     def scrape_jobs(self) -> List[Dict[str, str]]:
         all_job_links = set()
@@ -120,9 +150,11 @@ class UpgradeEstateScraper(BaseScraper):
         for url in job_links:
             print(f"Scraping: {url}")
             try:
-                jobs.append(self.parse_job_detail(url))
+                job = self.parse_job_detail(url)
+                if job:
+                    jobs.append(job)
                 time.sleep(1)
             except Exception as exc:
                 print(f"Failed to scrape {url}: {exc}")
 
-        return jobs
+        return self.sort_jobs(jobs)

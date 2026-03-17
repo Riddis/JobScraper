@@ -4,7 +4,6 @@ import json
 import time
 from typing import Dict, List
 
-import requests
 from bs4 import BeautifulSoup
 
 from scrapers.base import BaseScraper
@@ -25,7 +24,7 @@ class VDKScraper(BaseScraper):
     }
 
     def __init__(self) -> None:
-        self.session = requests.Session()
+        super().__init__()
         self.session.headers.update(self.headers)
 
     def get_soup(self, url: str) -> BeautifulSoup:
@@ -52,9 +51,52 @@ class VDKScraper(BaseScraper):
 
         return True
 
-    def extract_job_links_from_html(self, html: str) -> List[str]:
+    def normalize_location(self, text: str) -> str:
+        location = self.clean_text(text)
+
+        if not location:
+            return ""
+
+        if location.lower().startswith("hoofdzetel "):
+            location = location[len("hoofdzetel "):]
+
+        if location.lower() in {"brussel / bruxelles", "bruxelles / brussel"}:
+            return "Brussel"
+
+        return self.clean_text(location)
+
+    def extract_jobs_from_html(self, html: str) -> Dict[str, Dict[str, str]]:
         soup = BeautifulSoup(html, "lxml")
-        links = set()
+        jobs_by_url: Dict[str, Dict[str, str]] = {}
+
+        for node in soup.select(".node--type-vacancy"):
+            link = node.select_one("h3 a[href], a.spread-link[href]")
+            if not link:
+                continue
+
+            absolute_url = self.normalize_url(self.base_url, link.get("href"))
+            if not absolute_url:
+                continue
+
+            if not self.is_job_detail_url(absolute_url):
+                continue
+
+            title = self.clean_text(link.get_text(" ", strip=True))
+
+            location = ""
+            location_el = node.select_one(".field--name-field-location")
+            if location_el:
+                location = self.normalize_location(
+                    location_el.get_text(" ", strip=True)
+                )
+
+            jobs_by_url[absolute_url] = {
+                "title": title,
+                "location": location,
+            }
+
+        if jobs_by_url:
+            return jobs_by_url
 
         for a in soup.find_all("a", href=True):
             absolute_url = self.normalize_url(self.base_url, a["href"])
@@ -65,9 +107,15 @@ class VDKScraper(BaseScraper):
             if not self.is_job_detail_url(absolute_url):
                 continue
 
-            links.add(absolute_url)
+            jobs_by_url.setdefault(
+                absolute_url,
+                {
+                    "title": self.clean_text(a.get_text(" ", strip=True)),
+                    "location": "",
+                },
+            )
 
-        return sorted(links)
+        return jobs_by_url
 
     def get_view_dom_id(self, html: str) -> str:
         soup = BeautifulSoup(html, "lxml")
@@ -143,13 +191,20 @@ class VDKScraper(BaseScraper):
 
         return "\n".join(html_parts)
 
-    def parse_job_detail(self, job_url: str) -> Dict[str, str]:
+    def parse_job_detail(
+        self,
+        job_url: str,
+        listing_title: str = "",
+        listing_location: str = "",
+    ) -> Dict[str, str] | None:
         soup = self.get_soup(job_url)
 
-        title = ""
-        title_tag = soup.find("h1")
-        if title_tag:
-            title = self.clean_text(title_tag.get_text(" ", strip=True))
+        title = self.clean_text(listing_title)
+
+        if not title:
+            title_tag = soup.find("h1")
+            if title_tag:
+                title = self.clean_text(title_tag.get_text(" ", strip=True))
 
         if not title and soup.title and soup.title.string:
             title = self.clean_text(soup.title.string)
@@ -157,14 +212,18 @@ class VDKScraper(BaseScraper):
             title = title.replace(" - vdk bank", "")
             title = self.clean_text(title)
 
-        return {
-            "source": self.source,
-            "title": title,
-            "url": job_url,
-        }
+        if not title:
+            return None
+
+        return self.build_job_dict(
+            title=title,
+            url=job_url,
+            location=self.normalize_location(listing_location),
+            location_is_guess=False,
+        )
 
     def scrape_jobs(self) -> List[Dict[str, str]]:
-        all_job_links = set()
+        jobs_by_url: Dict[str, Dict[str, str]] = {}
 
         print(f"Fetching listing page: {self.listing_url}")
 
@@ -174,8 +233,7 @@ class VDKScraper(BaseScraper):
             print(f"Failed to fetch listing page {self.listing_url}: {exc}")
             return []
 
-        first_page_links = self.extract_job_links_from_html(first_page_html)
-        all_job_links.update(first_page_links)
+        jobs_by_url.update(self.extract_jobs_from_html(first_page_html))
 
         view_dom_id = self.get_view_dom_id(first_page_html)
 
@@ -195,21 +253,21 @@ class VDKScraper(BaseScraper):
                 if not page_html:
                     break
 
-                page_links = self.extract_job_links_from_html(page_html)
+                page_jobs = self.extract_jobs_from_html(page_html)
 
-                if not page_links:
+                if not page_jobs:
                     break
 
-                previous_count = len(all_job_links)
-                all_job_links.update(page_links)
+                previous_count = len(jobs_by_url)
+                jobs_by_url.update(page_jobs)
 
-                if len(all_job_links) == previous_count:
+                if len(jobs_by_url) == previous_count:
                     break
 
                 ajax_page_number += 1
                 time.sleep(1)
 
-        job_links = sorted(all_job_links)
+        job_links = sorted(jobs_by_url)
 
         print(f"Found {len(job_links)} job links\n")
 
@@ -218,9 +276,15 @@ class VDKScraper(BaseScraper):
         for url in job_links:
             print(f"Scraping: {url}")
             try:
-                jobs.append(self.parse_job_detail(url))
+                job = self.parse_job_detail(
+                    job_url=url,
+                    listing_title=jobs_by_url[url].get("title", ""),
+                    listing_location=jobs_by_url[url].get("location", ""),
+                )
+                if job:
+                    jobs.append(job)
                 time.sleep(1)
             except Exception as exc:
                 print(f"Failed to scrape {url}: {exc}")
 
-        return jobs
+        return self.sort_jobs(jobs)

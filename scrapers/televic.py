@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Dict, List
 
-import requests
 from bs4 import BeautifulSoup
 
 from scrapers.base import BaseScraper
@@ -12,9 +11,6 @@ class TelevicScraper(BaseScraper):
     source = "televic"
     base_url = "https://careers.televic.com"
     listing_url = "https://careers.televic.com/jobs/"
-
-    def clean_text(self, text: str) -> str:
-        return " ".join(text.split())
 
     def is_job_url(self, url: str) -> bool:
         path = self.url_path(url)
@@ -31,13 +27,58 @@ class TelevicScraper(BaseScraper):
     def is_belgium_text(self, text: str) -> bool:
         return "belgium" in text.lower()
 
-    def extract_title_from_card(self, card) -> str:
+    def normalize_location(self, text: str) -> str:
+        location = self.clean_text(text)
+        if not location:
+            return ""
+
+        if location.lower().endswith(", belgium"):
+            location = location[:-9]
+
+        return self.clean_text(location.rstrip(",").strip())
+
+    def extract_title_from_card(self, card: BeautifulSoup) -> str:
         for selector in ("h2", "h3", ".job-title", ".entry-title"):
             el = card.select_one(selector)
             if el:
                 title = self.clean_text(el.get_text(" ", strip=True))
                 if title:
                     return title
+
+        return ""
+
+    def extract_location_from_card(self, card: BeautifulSoup) -> str:
+        location_label = None
+
+        for heading in card.select(".elementor-heading-title"):
+            text = self.clean_text(heading.get_text(" ", strip=True)).lower()
+            if text == "location":
+                location_label = heading
+                break
+
+        if location_label:
+            container = location_label.find_parent(
+                class_=lambda value: value and "e-con" in " ".join(value)
+            )
+            if container:
+                sibling_container = container.find_next_sibling(
+                    class_=lambda value: value and "e-con" in " ".join(value)
+                )
+                if sibling_container:
+                    widget_container = sibling_container.select_one(
+                        ".elementor-widget-container"
+                    )
+                    if widget_container:
+                        location_text = self.clean_text(
+                            widget_container.get_text(" ", strip=True)
+                        )
+                        if location_text:
+                            return self.normalize_location(location_text)
+
+        for el in card.select(".elementor-widget-container"):
+            text = self.clean_text(el.get_text(" ", strip=True))
+            if text and self.is_belgium_text(text):
+                return self.normalize_location(text)
 
         return ""
 
@@ -63,23 +104,13 @@ class TelevicScraper(BaseScraper):
         return self.is_belgium_text(text)
 
     def scrape_jobs(self) -> List[Dict[str, str]]:
-        headers = {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/122.0.0.0 Safari/537.36"
-            )
-        }
-
         links = set()
-        link_titles = {}
+        link_titles: Dict[str, str] = {}
+        link_locations: Dict[str, str] = {}
 
         print(f"Fetching listing page: {self.listing_url}")
 
-        response = requests.get(self.listing_url, headers=headers, timeout=30)
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.text, "lxml")
+        soup = self.get_soup(self.listing_url)
 
         for a in soup.select("a[href]"):
             href = a.get("href")
@@ -90,15 +121,24 @@ class TelevicScraper(BaseScraper):
             if not self.is_job_url(url):
                 continue
 
-            card = a
-            for parent in a.parents:
-                parent_text = self.clean_text(parent.get_text(" ", strip=True))
-                if not parent_text:
-                    continue
+            card = None
 
-                if "read more" in parent_text.lower():
-                    card = parent
-                    break
+            overlay_wrap = a.find_parent(class_="jet-engine-listing-overlay-wrap")
+            if overlay_wrap:
+                card = overlay_wrap
+
+            if card is None:
+                for parent in a.parents:
+                    parent_text = self.clean_text(parent.get_text(" ", strip=True))
+                    if not parent_text:
+                        continue
+
+                    if "read more" in parent_text.lower():
+                        card = parent
+                        break
+
+            if card is None:
+                card = a
 
             card_text = self.clean_text(card.get_text(" ", strip=True))
             if not self.is_belgium_text(card_text):
@@ -114,8 +154,12 @@ class TelevicScraper(BaseScraper):
             if "spontaneous" in title.lower():
                 continue
 
+            location = self.extract_location_from_card(card)
+
             links.add(url)
             link_titles[url] = title
+            if location:
+                link_locations[url] = location
 
         print(f"Found {len(links)} job links")
 
@@ -125,11 +169,9 @@ class TelevicScraper(BaseScraper):
             print(f"Scraping: {url}")
 
             title = link_titles.get(url, "")
+            location = link_locations.get(url, "")
 
-            response = requests.get(url, headers=headers, timeout=30)
-            response.raise_for_status()
-
-            soup = BeautifulSoup(response.text, "lxml")
+            soup = self.get_soup(url)
 
             if not self.detail_is_belgium(soup):
                 continue
@@ -144,11 +186,12 @@ class TelevicScraper(BaseScraper):
                 continue
 
             jobs.append(
-                {
-                    "source": self.source,
-                    "title": title,
-                    "url": url,
-                }
+                self.build_job_dict(
+                    title=title,
+                    url=url,
+                    location=location,
+                    location_is_guess=False,
+                )
             )
 
-        return sorted(jobs, key=lambda job: (job["title"], job["url"]))
+        return self.sort_jobs(jobs)

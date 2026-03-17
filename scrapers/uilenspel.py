@@ -40,15 +40,21 @@ class UilenspelScraper(BaseScraper):
         response.raise_for_status()
         return response.json()
 
-    def parse_job(self, job: Dict) -> Dict[str, str]:
+    def parse_job(self, job: Dict) -> Dict[str, str] | None:
         title = str(job.get("name", "")).strip()
         url = str(job.get("vacancy_url", "")).strip()
 
-        return {
-            "source": self.source,
-            "title": title,
-            "url": url,
-        }
+        if not title or not url:
+            return None
+
+        location = self.clean_text(str(job.get("address_city", "")))
+
+        return self.build_job_dict(
+            title=title,
+            url=url,
+            location=location,
+            location_is_guess=False,
+        )
 
     def scrape_jobs(self) -> List[Dict[str, str]]:
         jobs_by_url = {}
@@ -68,9 +74,7 @@ class UilenspelScraper(BaseScraper):
             for job in results:
                 parsed_job = self.parse_job(job)
 
-                if not parsed_job["title"]:
-                    continue
-                if not parsed_job["url"]:
+                if not parsed_job:
                     continue
 
                 jobs_by_url[parsed_job["url"]] = parsed_job
@@ -88,7 +92,7 @@ class UilenspelScraper(BaseScraper):
 
             time.sleep(1)
 
-        jobs = sorted(jobs_by_url.values(), key=lambda job: job["title"])
+        jobs = self.sort_jobs(list(jobs_by_url.values()))
 
         print(f"Found {len(jobs)} jobs\n")
 

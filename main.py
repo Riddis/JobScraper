@@ -25,8 +25,11 @@ from scrapers.resolvus import ResolvusScraper
 from scrapers.simac import SimacScraper
 from scrapers.splendit import SplendITScraper
 from scrapers.talencia import TalenciaScraper
+from scrapers.televic import TelevicScraper
 from scrapers.uilenspel import UilenspelScraper
 from scrapers.upgrade_estate import UpgradeEstateScraper
+from scrapers.verdon import VerdonScraper
+from scrapers.xcare import XCareScraper
 from scrapers.xelor import XelorScraper
 from scrapers.oost_vlaanderen import OostVlaanderenScraper
 from scrapers.infrabel import InfrabelScraper
@@ -245,11 +248,14 @@ def main() -> None:
         ##SynamediaScraper(),
         #TaborGroepScraper(),
         #TalenciaScraper(),
-        UilenspelScraper(),
+        TelevicScraper(),
+        #UilenspelScraper(),
         UpgradeEstateScraper(),
-        VDKScraper(),
-        VolvoCarsScraper(),
-        XelorScraper(),
+        #VDKScraper(),
+        #VerdonScraper(),
+        #VolvoCarsScraper(),
+        #XCareScraper(),
+        #XelorScraper(),
     ]
 
     if DISABLE_BLACKLIST:
