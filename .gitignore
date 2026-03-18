@@ -1,8 +1,5 @@
-# Virtual environment
+__pycache__/
+*.pyc
 .venv/
-
-# Project secrets
 config.py
-
-# Output files
 output/
