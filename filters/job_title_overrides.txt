@@ -1,0 +1,105 @@
+# JOB TITLE OVERRIDES
+#
+# HOW TO USE THIS FILE
+# --------------------
+# Each line is:
+# full title|category|subcategory
+#
+# Example:
+# Service Desk Engineer|it_support|helpdesk
+#
+# WHAT THIS FILE IS FOR
+# ---------------------
+# Use this file when ONE specific title is being classified wrong.
+# This file is checked before the normal keyword rules.
+#
+# GOOD USE CASES
+# --------------
+# - A title contains words that would otherwise match the wrong category
+# - A company uses a weird/internal title
+# - You want one exact title forced into a category
+#
+# IMPORTANT
+# ---------
+# - Use the title as it appears in the CSV
+# - Matching is case-insensitive
+# - Small punctuation differences are normalized automatically
+#
+# FORMAT RULE
+# -----------
+# Use exactly 3 parts separated by |
+# full title|category|subcategory
+
+
+ASC System Specialist|infrastructure_cloud|system_specialist
+Administrateur Base de Données H/F|data_ai|database_administrator
+Administrateur bases de données (H/F)|data_ai|database_administrator
+Agile Coach|product_project_delivery|agile_coach
+Azure Cloud Technical Analyst|infrastructure_cloud|cloud_analyst
+BI Analist / Ontwikkelaar|data_ai|bi_analyst_developer
+BX1 recherche: Ingénieur Système IT|infrastructure_cloud|system_engineer
+Beleidsmedewerker data en analyse bij dienst Data|data_ai|data_policy
+Bizztalent zkt. gemotiveerde System Admin !|infrastructure_cloud|system_administrator
+Bizztalent zkt. toegewijde (freelance) S ystem Engineer|infrastructure_cloud|system_engineer
+Business Analysis & Applications Specialist|business_systems_erp|applications_specialist
+Capacity Manager|product_project_delivery|capacity_manager
+Data-kapitein (m/v/x)|data_ai|data_analyst
+Dynatrace Engineer|devops_platform|dynatrace
+EDI Specialist|business_systems_erp|edi
+Expert Elastic|devops_platform|elastic
+Expert Linux|infrastructure_cloud|linux_expert
+Expert Sauvegarde DELL EMC|infrastructure_cloud|backup_storage
+Expert réseaux et sécurité|security|network_security
+Expert(e) Virtualisation Nutanix F/H|infrastructure_cloud|virtualization
+Freelance Hardware Technician|it_support|hardware_technician
+IT Access Management Officer|security|access_management
+IT Support Coach for Mac User|it_support|mac_support
+IT Support Regional Manager|it_leadership|regional_manager
+IT auditor|security|it_auditor
+IT security expert|security|security_expert
+IT security officer (Security operations)|security|security_operations
+IT security senior expert|security|security_senior_expert
+Ingénieur Cloud (H/F)|infrastructure_cloud|cloud_engineer
+Ingénieur DevSecOps H/F|security|devsecops
+Ingénieur Réseau & Sécurité (H/F)|security|network_security
+Ingénieur Réseau N3|infrastructure_cloud|network_engineer
+Ingénieur Réseaux (H/F)|infrastructure_cloud|network_engineer
+Ingénieur Système Linux h/f|infrastructure_cloud|system_linux
+Ingénieur Système Windows|infrastructure_cloud|system_windows
+Ingénieur Système Windows h/f|infrastructure_cloud|system_windows
+Ingénieur de Production IT H/F|devops_platform|production_it
+Ingénieur réseau h/f|infrastructure_cloud|network_engineer
+Ingénieur réseau sécurité h/f|security|network_security
+Ingénieur sécurité réseau|security|network_security
+Ingénieur(e) Système H/F|infrastructure_cloud|system_engineer
+Ingénieur(e) Système Linux (H/F)|infrastructure_cloud|system_linux
+Integration Engineer BCOM|business_systems_erp|integration_engineer
+Internship 2025-2026: R&D of a monitoring solution for a Microsoft Azure environment|devops_platform|monitoring
+Junior NOC engineer|it_support|noc
+Junior Project & Service Engineer|product_project_delivery|service_engineer
+Linux expert|infrastructure_cloud|linux_expert
+Operations Manager|it_leadership|operations_manager
+PMO Officer|product_project_delivery|pmo
+Process Consultant|business_systems_erp|process_consultant
+Product & Services Manager - Mobile Communication|product_project_delivery|product_manager
+Product Management Specialist|product_project_delivery|product_management
+Programming Traineeship|software_development|programming_traineeship
+Project & Service Engineer|product_project_delivery|service_engineer
+Project Controller|product_project_delivery|project_controller
+Project Leader ICT Housing & Power Supply|product_project_delivery|project_leader_ict
+Project Leader ICT Signalling Design Platform|product_project_delivery|project_leader_ict
+Project Leader IT|product_project_delivery|project_leader_it
+Project Management Officer|product_project_delivery|project_management_office
+Project Office Analyst – Sint-Joost|product_project_delivery|project_office_analyst
+Projectcoördinator|product_project_delivery|project_coordinator
+Projectcoördinator- Automatisatie|product_project_delivery|project_coordinator
+Projectleider|product_project_delivery|projectleider
+Projectleider Infrastructuur|product_project_delivery|projectleider_infrastructuur
+SAS Data Analist|data_ai|sas_data_analyst
+Solution Analyst|business_systems_erp|solution_analyst
+Specialist M365|infrastructure_cloud|specialist_m365
+Systeembeheerder|infrastructure_cloud|systeembeheerder
+Traineeship IT Analyse|business_systems_erp|traineeship_it_analysis
+VoIP Engineer|infrastructure_cloud|voip
+ingénieur Réseaux et Sécurité H/F|security|network_security
+ingénieur SysOps|devops_platform|sysops

@@ -1,0 +1,232 @@
+# JOB CATEGORY RULES
+#
+# Each line:
+# category|subcategory|keyword
+#
+# First match wins.
+# Put more specific rules above broader ones.
+#
+# Use this file when a REAL IT title ends up as "unrelated".
+# If a title is clearly not relevant, add it to the blacklist instead.
+
+
+security|devsecops|devsecops
+security|security_engineer|security engineer
+security|security_analyst|security analyst
+security|security_architect|security architect
+security|security_officer|security officer
+security|security_operations|security operations
+security|security_expert|security expert
+security|security_senior_expert|security senior expert
+security|cybersecurity|cybersecurity
+security|cyber_security|cyber security
+security|information_security|information security
+security|soc_analyst|soc analyst
+security|soc_engineer|soc engineer
+security|iam|iam
+security|access_management|access management
+security|identity_and_access|identity and access
+security|it_auditor|it auditor
+security|reseau_securite|reseau securite
+security|reseaux_securite|reseaux securite
+security|network_security|network security
+security|pentest|pentest
+security|pentester|pentester
+
+data_ai|database_administrator|administrateur base de donnees
+data_ai|database_administrator|administrateur bases de donnees
+data_ai|database_administrator|database administrator
+data_ai|dba|dba
+data_ai|data_engineer|data engineer
+data_ai|data_scientist|data scientist
+data_ai|data_analyst|data analyst
+data_ai|data_analyst|data analist
+data_ai|data_architect|data architect
+data_ai|analytics_engineer|analytics engineer
+data_ai|analytics|analytics
+data_ai|bi_analyst_developer|bi analist ontwikkelaar
+data_ai|bi_developer|bi developer
+data_ai|business_intelligence|business intelligence
+data_ai|etl|etl
+data_ai|machine_learning|machine learning
+data_ai|artificial_intelligence|artificial intelligence
+data_ai|ai_engineer|ai engineer
+data_ai|ml_engineer|ml engineer
+data_ai|sas|sas
+data_ai|sas_data_analyst|sas data analist
+data_ai|data_policy|data en analyse
+
+devops_platform|devsecops|devsecops
+devops_platform|dynatrace|dynatrace
+devops_platform|elastic|elastic
+devops_platform|monitoring|monitoring solution
+devops_platform|sysops|sysops
+devops_platform|devops|devops engineer
+devops_platform|devops|devops
+devops_platform|sre|sre
+devops_platform|platform_engineering|platform engineer
+devops_platform|build_engineer|build engineer
+devops_platform|release_engineer|release engineer
+devops_platform|ci_cd|ci cd
+devops_platform|cicd|cicd
+devops_platform|cloudops|cloudops
+devops_platform|kubernetes|kubernetes
+devops_platform|openshift|openshift
+devops_platform|terraform|terraform
+devops_platform|production_it|production it
+devops_platform|infrastructure_as_code|infrastructure as code
+
+it_support|mac_support|mac user
+it_support|hardware_technician|hardware technician
+it_support|helpdesk|helpdesk
+it_support|support_engineer|support engineer
+it_support|technical_support|technical support
+it_support|desktop_support|desktop support
+it_support|onsite_support|onsite support
+it_support|field_support|field support
+it_support|field_service|field service
+it_support|first_line|first line
+it_support|second_line|second line
+it_support|third_line|third line
+it_support|workplace_support|workplace support
+it_support|end_user_support|end user support
+it_support|noc|noc engineer
+it_support|it_support_coach|support coach
+
+qa_testing|qa_engineer|qa engineer
+qa_testing|test_engineer|test engineer
+qa_testing|automation_tester|automation tester
+qa_testing|test_automation|test automation
+qa_testing|software_tester|software tester
+qa_testing|quality_assurance|quality assurance
+qa_testing|tester|tester
+
+business_systems_erp|business_analysis|business analysis
+business_systems_erp|applications_specialist|applications specialist
+business_systems_erp|application_specialist|application specialist
+business_systems_erp|process_consultant|process consultant
+business_systems_erp|edi|edi specialist
+business_systems_erp|solution_analyst|solution analyst
+business_systems_erp|functional_analyst|functional analyst
+business_systems_erp|functional_analyst|functioneel analist
+business_systems_erp|business_analyst|business analyst
+business_systems_erp|business_analyst|business analist
+business_systems_erp|traineeship_it_analysis|it analyse
+business_systems_erp|sap|sap
+business_systems_erp|salesforce|salesforce
+business_systems_erp|servicenow|servicenow
+business_systems_erp|erp|erp
+business_systems_erp|crm|crm
+business_systems_erp|dynamics|dynamics
+business_systems_erp|integration_engineer|integration engineer
+
+product_project_delivery|agile_coach|agile coach
+product_project_delivery|pmo|pmo officer
+product_project_delivery|project_management_office|project management officer
+product_project_delivery|project_office_analyst|project office analyst
+product_project_delivery|project_controller|project controller
+product_project_delivery|project_coordinator|projectcoordinator
+product_project_delivery|project_coordinator|project coordinator
+product_project_delivery|project_coordinator|projectcoordinator automatisatie
+product_project_delivery|project_leader|project leader
+product_project_delivery|projectleider|projectleider
+product_project_delivery|projectleider_infrastructuur|projectleider infrastructuur
+product_project_delivery|project_manager|project manager
+product_project_delivery|project_manager|projectmanager
+product_project_delivery|program_manager|program manager
+product_project_delivery|programme_manager|programme manager
+product_project_delivery|product_manager|product manager
+product_project_delivery|product_management|product management
+product_project_delivery|product_owner|product owner
+product_project_delivery|service_delivery|service delivery
+product_project_delivery|delivery_manager|delivery manager
+product_project_delivery|incident_manager|incident manager
+product_project_delivery|change_manager|change manager
+product_project_delivery|problem_manager|problem manager
+product_project_delivery|capacity_manager|capacity manager
+product_project_delivery|project_leader_it|project leader it
+product_project_delivery|project_leader_ict|project leader ict
+product_project_delivery|service_engineer|project and service engineer
+product_project_delivery|service_engineer|project service engineer
+product_project_delivery|service_engineer|junior project service engineer
+product_project_delivery|scrum_master|scrum master
+
+architecture|solution_architect|solution architect
+architecture|enterprise_architect|enterprise architect
+architecture|technical_architect|technical architect
+architecture|it_architect|it architect
+architecture|cloud_architect|cloud architect
+architecture|architect|architect
+
+infrastructure_cloud|system_specialist|system specialist
+infrastructure_cloud|system_administrator|system admin
+infrastructure_cloud|system_administrator|system administrator
+infrastructure_cloud|systeembeheerder|systeembeheerder
+infrastructure_cloud|system_engineer|system engineer
+infrastructure_cloud|system_engineer|ingenieur systeme
+infrastructure_cloud|system_engineer|systeme it
+infrastructure_cloud|linux_expert|linux expert
+infrastructure_cloud|linux_engineer|linux engineer
+infrastructure_cloud|system_linux|systeme linux
+infrastructure_cloud|windows_engineer|windows engineer
+infrastructure_cloud|system_windows|systeme windows
+infrastructure_cloud|infrastructure_engineer|infrastructure engineer
+infrastructure_cloud|infrastructure|infrastructure
+infrastructure_cloud|cloud_engineer|cloud engineer
+infrastructure_cloud|cloud_engineer|ingenieur cloud
+infrastructure_cloud|azure|azure
+infrastructure_cloud|network_engineer|network engineer
+infrastructure_cloud|reseau|ingenieur reseau
+infrastructure_cloud|reseaux|ingenieur reseaux
+infrastructure_cloud|reseau_n3|reseau n3
+infrastructure_cloud|virtualization|virtualisation
+infrastructure_cloud|virtualization|virtualization
+infrastructure_cloud|nutanix|nutanix
+infrastructure_cloud|vmware|vmware
+infrastructure_cloud|citrix|citrix
+infrastructure_cloud|m365|m365
+infrastructure_cloud|voip|voip
+infrastructure_cloud|backup|sauvegarde
+infrastructure_cloud|storage|dell emc
+infrastructure_cloud|middleware|middleware
+infrastructure_cloud|mainframe|mainframe
+infrastructure_cloud|storage_engineer|storage engineer
+infrastructure_cloud|workplace_engineer|workplace engineer
+infrastructure_cloud|specialist_m365|specialist m365
+
+software_development|programming_traineeship|programming traineeship
+software_development|backend|backend developer
+software_development|frontend|frontend developer
+software_development|fullstack|fullstack developer
+software_development|software_engineer|software engineer
+software_development|software_developer|software developer
+software_development|mobile_developer|mobile developer
+software_development|mobile_engineer|mobile engineer
+software_development|developer|ontwikkelaar
+software_development|backend|backend
+software_development|frontend|frontend
+software_development|fullstack|fullstack
+software_development|java|java
+software_development|python|python
+software_development|php|php
+software_development|dotnet|dotnet
+software_development|dotnet|.net
+software_development|dotnet|net developer
+software_development|android|android
+software_development|ios|ios
+software_development|csharp|c#
+software_development|cpp|c++
+software_development|react|react
+software_development|angular|angular
+software_development|node|node
+software_development|developer|developer
+
+it_leadership|operations_manager|operations manager
+it_leadership|regional_manager|regional manager
+it_leadership|team_lead|team lead
+it_leadership|technical_lead|technical lead
+it_leadership|head_of_it|head of it
+it_leadership|it_manager|it manager
+it_leadership|engineering_manager|engineering manager
+it_leadership|manager_infrastructure|manager infrastructure
+it_leadership|manager_infrastructuur|manager infrastructuur
