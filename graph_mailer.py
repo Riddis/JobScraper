@@ -68,7 +68,7 @@ def send_report_email_graph(
     sender: str,
     recipients: list[str],
     subject: str,
-    body_text: str,
+    body_html: str,
     attachments: list[Path],
 ) -> None:
     if not recipients:
@@ -86,8 +86,8 @@ def send_report_email_graph(
         "message": {
             "subject": subject,
             "body": {
-                "contentType": "Text",
-                "content": body_text,
+                "contentType": "HTML",
+                "content": body_html,
             },
             "toRecipients": [
                 {"emailAddress": {"address": recipient}}

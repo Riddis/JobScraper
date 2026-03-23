@@ -1,16 +1,20 @@
 from __future__ import annotations
 
 import csv
+import html
+import re
 import traceback
 from collections import Counter, defaultdict
 from copy import deepcopy
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Dict, List, Tuple
 
 from openpyxl import Workbook
 
 from config import (
+    APP_SECRET_EXPIRY_DATE,
+    APP_SECRET_WARNING_DAYS,
     BROKEN_SCRAPERS_FILE,
     CATEGORY_RULES_FILE,
     CSV_FILE,
@@ -70,6 +74,7 @@ from scrapers.uilenspel import UilenspelScraper
 from scrapers.upgrade_estate import UpgradeEstateScraper
 from scrapers.vdkbank import VDKScraper
 from scrapers.verdon import VerdonScraper
+from scrapers.vlaanderen_connect import VlaanderenConnectScraper
 from scrapers.volvocars import VolvoCarsScraper
 from scrapers.xcare import XCareScraper
 from scrapers.xelor import XelorScraper
@@ -214,7 +219,8 @@ def save_unrelated_jobs_txt(
 ) -> None:
     unrelated_rows = sorted(
         [
-            row for row in jobs.values()
+            row
+            for row in jobs.values()
             if row.get("is_active") == "True" and row.get("category") == "unrelated"
         ],
         key=lambda row: (row.get("source", ""), row.get("title", "")),
@@ -256,7 +262,10 @@ def save_removed_jobs_txt(
             f.write("No jobs were removed this run.\n")
             return
 
-        for row in sorted(removed_jobs, key=lambda r: (r.get("source", ""), r.get("title", ""))):
+        for row in sorted(
+            removed_jobs,
+            key=lambda r: (r.get("source", ""), r.get("title", "")),
+        ):
             f.write(f"source: {row.get('source', '')}\n")
             f.write(f"title: {row.get('title', '')}\n")
             f.write(f"url: {row.get('url', '')}\n")
@@ -353,7 +362,11 @@ def merge_scrape_results(
             new_jobs.append(deepcopy(new_row))
 
     for key, row in existing_jobs.items():
-        if key not in current_keys and row["source"] in scraped_sources and row.get("is_active") == "True":
+        if (
+            key not in current_keys
+            and row["source"] in scraped_sources
+            and row.get("is_active") == "True"
+        ):
             row["is_active"] = "False"
             row["last_seen_date"] = scraped_date
             removed_jobs.append(deepcopy(row))
@@ -378,6 +391,40 @@ def build_category_counts(
     return Counter(row.get("category", "missing") for row in active_jobs)
 
 
+def should_show_secret_expiry_warning() -> tuple[bool, int]:
+    if not APP_SECRET_EXPIRY_DATE:
+        return False, 0
+
+    expiry_date = datetime.strptime(APP_SECRET_EXPIRY_DATE, "%Y-%m-%d").date()
+    today = date.today()
+    days_left = (expiry_date - today).days
+
+    return 0 <= days_left <= APP_SECRET_WARNING_DAYS, days_left
+
+
+def build_secret_expiry_warning_html() -> str:
+    show_warning, days_left = should_show_secret_expiry_warning()
+
+    if not show_warning:
+        return ""
+
+    expiry_text = html.escape(APP_SECRET_EXPIRY_DATE)
+
+    return f"""
+<table width="100%" cellpadding="12" cellspacing="0" border="0" style="margin-bottom:20px; border:3px solid #ff0000; background-color:#ffe5e5;">
+<tr>
+<td style="font-family: Arial, sans-serif; font-size:14px; color:#b00000;">
+<b>⚠ APPLICATION SECRET EXPIRING SOON</b><br><br>
+Your Microsoft Entra application secret will expire soon.<br>
+Please generate a new secret in Entra and update it in <b>config.py</b>.<br><br>
+Expiry date: <b>{expiry_text}</b><br>
+Days remaining: <b>{days_left}</b>
+</td>
+</tr>
+</table>
+"""
+
+
 def build_email_body(
     category_counts: Counter,
     new_jobs: List[Dict[str, str]],
@@ -386,63 +433,140 @@ def build_email_body(
     broken_scrapers: List[tuple[str, str]],
     scraped_date: str,
 ) -> str:
-    lines: List[str] = []
+    warning_html = build_secret_expiry_warning_html()
 
-    lines.append(f"Job scraper report - {scraped_date}")
-    lines.append("")
+    def section_title(title: str) -> str:
+        return f"""
+<tr>
+  <td style="padding:14px 0 8px 0; font-family:Arial,sans-serif; font-size:18px; font-weight:bold; color:#222222;">
+    {html.escape(title)}
+  </td>
+</tr>
+"""
 
-    lines.append("Category overview")
-    lines.append("-----------------")
+    def paragraph(text: str) -> str:
+        return f"""
+<tr>
+  <td style="padding:0 0 8px 0; font-family:Arial,sans-serif; font-size:14px; color:#222222;">
+    {text}
+  </td>
+</tr>
+"""
+
+    def bullet_list(items: List[str]) -> str:
+        if not items:
+            return paragraph("None")
+
+        rows = []
+        for item in items:
+            rows.append(
+                f"""
+<tr>
+  <td style="padding:0 0 6px 18px; font-family:Arial,sans-serif; font-size:14px; color:#222222;">
+    • {item}
+  </td>
+</tr>
+"""
+            )
+        return "".join(rows)
+
+    parts: List[str] = []
+
+    parts.append("""
+<html>
+<body style="margin:0; padding:0; background-color:#f4f4f4;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background-color:#f4f4f4;">
+  <tr>
+    <td align="center" style="padding:24px;">
+      <table width="900" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; width:900px; max-width:900px; background-color:#ffffff; border:1px solid #dddddd;">
+        <tr>
+          <td style="padding:24px; font-family:Arial,sans-serif; font-size:14px; color:#222222;">
+""")
+
+    if warning_html:
+        parts.append(warning_html)
+
+    parts.append(f"""
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+  <tr>
+    <td style="padding:0 0 18px 0; font-family:Arial,sans-serif; font-size:24px; font-weight:bold; color:#111111;">
+      Job scraper report - {html.escape(scraped_date)}
+    </td>
+  </tr>
+</table>
+""")
+
+    parts.append("""
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+""")
+
+    parts.append(section_title("Category overview"))
+
     if category_counts:
-        for category, count in sorted(category_counts.items(), key=lambda x: (-x[1], x[0])):
-            lines.append(f"{category}: {count}")
+        category_items = [
+            f"<b>{html.escape(category)}</b>: {count}"
+            for category, count in sorted(category_counts.items(), key=lambda x: (-x[1], x[0]))
+        ]
+        parts.append(bullet_list(category_items))
     else:
-        lines.append("No active jobs found.")
+        parts.append(paragraph("No active jobs found."))
 
-    lines.append("")
-    lines.append("Unrelated jobs to review")
-    lines.append("------------------------")
+    parts.append(section_title("Unrelated jobs to review"))
     if unrelated_count > 0:
-        lines.append(f"{unrelated_count} unrelated jobs need review.")
+        parts.append(paragraph(f"<b>{unrelated_count}</b> unrelated jobs need review."))
     else:
-        lines.append("None")
+        parts.append(paragraph("None"))
 
-    lines.append("")
-    lines.append(f"New jobs this run: {len(new_jobs)}")
-    lines.append("-----------------")
-    if new_jobs:
-        for row in sorted(new_jobs, key=lambda r: (r.get('source', ''), r.get('title', ''))):
-            lines.append(f"- [{row.get('source', '')}] {row.get('title', '')}")
-    else:
-        lines.append("None")
+    parts.append(section_title(f"New jobs this run: {len(new_jobs)}"))
+    new_job_items = [
+        f"[{html.escape(row.get('source', ''))}] {html.escape(row.get('title', ''))}"
+        for row in sorted(new_jobs, key=lambda r: (r.get('source', ''), r.get('title', '')))
+    ]
+    parts.append(bullet_list(new_job_items))
 
-    lines.append("")
-    lines.append(f"Removed jobs this run: {len(removed_jobs)}")
-    lines.append("---------------------")
-    if removed_jobs:
-        for row in sorted(removed_jobs, key=lambda r: (r.get('source', ''), r.get('title', ''))):
-            lines.append(f"- [{row.get('source', '')}] {row.get('title', '')}")
-    else:
-        lines.append("None")
+    parts.append(section_title(f"Removed jobs this run: {len(removed_jobs)}"))
+    removed_job_items = [
+        f"[{html.escape(row.get('source', ''))}] {html.escape(row.get('title', ''))}"
+        for row in sorted(removed_jobs, key=lambda r: (r.get('source', ''), r.get('title', '')))
+    ]
+    parts.append(bullet_list(removed_job_items))
 
-    lines.append("")
-    lines.append(f"Broken scrapers: {len(broken_scrapers)}")
-    lines.append("---------------")
-    if broken_scrapers:
-        for scraper_name, error_message in broken_scrapers:
-            lines.append(f"- {scraper_name}: {error_message}")
-    else:
-        lines.append("None")
+    parts.append(section_title(f"Broken scrapers: {len(broken_scrapers)}"))
+    broken_scraper_items = [
+        f"<b>{html.escape(scraper_name)}</b>: {html.escape(error_message)}"
+        for scraper_name, error_message in broken_scrapers
+    ]
+    parts.append(bullet_list(broken_scraper_items))
 
-    lines.append("")
-    lines.append("Attached files:")
-    lines.append("- jobs.csv")
-    lines.append("- jobs.xlsx")
-    lines.append("- unrelated_jobs.txt")
-    lines.append("- broken_scrapers.txt")
-    lines.append("- removed_jobs.txt")
+    parts.append(section_title("Attached files"))
+    parts.append(
+        bullet_list(
+            [
+                "jobs.csv",
+                "jobs.xlsx",
+                "unrelated_jobs.txt",
+                "broken_scrapers.txt",
+                "removed_jobs.txt",
+            ]
+        )
+    )
 
-    return "\n".join(lines)
+    parts.append("""
+</table>
+""")
+
+    parts.append("""
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+""")
+
+    return "".join(parts)
 
 
 def send_report_email(
@@ -463,7 +587,7 @@ def send_report_email(
         sender=EMAIL_CONFIG["GRAPH_SENDER"],
         recipients=EMAIL_CONFIG["EMAIL_TO"],
         subject=subject,
-        body_text=body,
+        body_html=body,
         attachments=attachments,
     )
 
@@ -557,6 +681,7 @@ def main() -> None:
         UpgradeEstateScraper(),
         VDKScraper(),
         VerdonScraper(),
+        VlaanderenConnectScraper(),
         VolvoCarsScraper(),
         XCareScraper(),
         XelorScraper(),
